@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<tariffs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="telecom.xsd"
+        xmlns="http://anelkin.by/telecom">
+    <tariff name="Test Tarif 1" operatorName="Velcom">
+        <payRoll>14</payRoll>
+        <callPrices onFavoriteNumber="0.05">
+            <insideNetwork>0.1</insideNetwork>
+            <outsideNetwork>0.2</outsideNetwork>
+            <onLandLine>0.25</onLandLine>
+        </callPrices>
+        <smsPrice>0.05</smsPrice>
+        <parameters>
+            <favoriteNumbersAmount>3</favoriteNumbersAmount>
+            <tarificatoin>12</tarificatoin>
+            <activationPayment>9.99</activationPayment>
+        </parameters>
+    </tariff>
+</tariffs>

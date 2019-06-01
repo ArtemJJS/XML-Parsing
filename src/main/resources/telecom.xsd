@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://anelkin.by/telecom"
+        xmlns:tns="http://anelkin.by/telecom">
+    <element name="tariffs">
+        <complexType>
+            <sequence>
+                <element name="tariff" minOccurs="0" maxOccurs="unbounded" type="tns:tariff"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <complexType name="tariff">
+        <sequence>
+            <element name="payRoll" type="tns:positiveDecimal"/>
+            <element name="callPrices" type="tns:callPricePlan"/>
+            <element name="smsPrice" type="tns:positiveDecimal"/>
+            <element name="parameters" type="tns:tariffParameters"/>
+        </sequence>
+        <attribute name="name" type="string" use="required"/>
+        <attribute name="operatorName" type="string" use="required"/>
+        <!--attributes are optional by default -->
+        <attribute name="openDate" type="date"/>
+        <attribute name="closeDate" type="date"/>
+    </complexType>
+
+    <complexType name="callPricePlan">
+        <sequence>
+            <element name="insideNetwork" type="tns:positiveDecimal"/>
+            <element name="outsideNetwork" type="tns:positiveDecimal"/>
+            <element name="onLandLine" type="tns:positiveDecimal"/>
+        </sequence>
+        <!--можно ли вот так? часть элементами часть атрибутами-->
+        <attribute name="onFavoriteNumber" type="tns:positiveDecimal"/>
+    </complexType>
+
+    <complexType name="tariffParameters">
+        <sequence>
+            <element name="favoriteNumbersAmount" type="nonNegativeInteger"/>
+            <element name="tarificatoin" type="tns:tarificationInterval"/>
+            <element name="activationPayment" type="tns:positiveDecimal"/>
+        </sequence>
+    </complexType>
+
+    <simpleType name="positiveDecimal">
+        <restriction base="decimal">
+            <minInclusive value="0"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="tarificationInterval">
+        <restriction base="positiveInteger">
+            <enumeration value="1"/>
+            <enumeration value="12"/>
+            <enumeration value="30"/>
+            <enumeration value="60"/>
+        </restriction>
+    </simpleType>
+</schema>
