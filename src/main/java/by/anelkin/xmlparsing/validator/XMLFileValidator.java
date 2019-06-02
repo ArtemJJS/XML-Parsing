@@ -12,7 +12,6 @@ public class XMLFileValidator {
     private static final Logger logger = Logger.getLogger(XMLFileValidator.class);
     private static final String DEFAULT_PATH = "src/main/resources/data/tariffs.xml";
 
-
     public boolean validate(String path) {
         if (path == null || !(new File(path)).isFile()) {
             logger.warn("Wrong path to file: " + path + " !!! Path changed to default: " + DEFAULT_PATH);
@@ -27,13 +26,13 @@ public class XMLFileValidator {
             parser.setFeature("http://apache.org/xml/features/validation/schema", true);
             parser.parse(path);
             //here we take boolean from handler to return in validator
-            isValid = handler.isErrorInFile;
+            isValid = !handler.isErrorInFile;
         } catch (IOException | SAXException e) {
             throw new RuntimeException(e);
         }
 
-        if (isValid){
-        logger.info("File " + path + " is valid.");
+        if (isValid) {
+            logger.info("File " + path + " is valid.");
         }
         return isValid;
     }

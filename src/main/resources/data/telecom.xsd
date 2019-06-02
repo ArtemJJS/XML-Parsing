@@ -21,26 +21,21 @@
         <attribute name="name" type="string" use="required"/>
         <attribute name="operatorName" type="string" use="required"/>
         <!--attributes are optional by default -->
-        <attribute name="openDate" type="date"/>
+        <attribute name="openDate" type="date" use="required"/>
         <attribute name="closeDate" type="date"/>
     </complexType>
 
     <complexType name="callPricePlan">
-        <sequence>
-            <element name="insideNetwork" type="tns:positiveDecimal"/>
-            <element name="outsideNetwork" type="tns:positiveDecimal"/>
-            <element name="onLandLine" type="tns:positiveDecimal"/>
-        </sequence>
-        <!--можно ли вот так? часть элементами часть атрибутами-->
-        <attribute name="onFavoriteNumber" type="tns:positiveDecimal"/>
+        <attribute name="insideNetwork" type="tns:positiveDecimal" use="required"/>
+        <attribute name="outsideNetwork" type="tns:positiveDecimal" use="required"/>
+        <attribute name="onLandLine" type="tns:positiveDecimal" use="required"/>
+        <attribute name="onFavoriteNumber" type="tns:positiveDecimal" default="0"/>
     </complexType>
 
     <complexType name="tariffParameters">
-        <sequence>
-            <element name="favoriteNumbersAmount" type="nonNegativeInteger"/>
-            <element name="tarificatoin" type="tns:tarificationInterval"/>
-            <element name="activationPayment" type="tns:positiveDecimal"/>
-        </sequence>
+        <attribute name="favoriteNumbersAmount" type="nonNegativeInteger" default="0"/>
+        <attribute name="tarification" type="tns:tarificationInterval" default="60"/>
+        <attribute name="activationPayment" type="tns:positiveDecimal" default="0"/>
     </complexType>
 
     <simpleType name="positiveDecimal">
