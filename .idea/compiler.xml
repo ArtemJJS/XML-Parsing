@@ -9,5 +9,11 @@
         <module name="XML-Parsing" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="11" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="XML-Parsing" options="--add-exports=java.xml/com.sun.org.apache.xalan.internal.xsltc.runtime.output=ALL-UNNAMED" />
+    </option>
   </component>
 </project>

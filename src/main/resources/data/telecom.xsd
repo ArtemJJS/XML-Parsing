@@ -2,6 +2,7 @@
 <schema elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema"
         targetNamespace="http://anelkin.by/telecom"
         xmlns:tns="http://anelkin.by/telecom">
+
     <element name="tariffs">
         <complexType>
             <sequence>

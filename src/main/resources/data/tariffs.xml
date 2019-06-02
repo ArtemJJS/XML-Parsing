@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <tariffs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="telecom.xsd"
+        xsi:schemaLocation="http://anelkin.by/telecom telecom.xsd"
         xmlns="http://anelkin.by/telecom">
-    <tariff name="Test Tarif 1" operatorName="Velcom">
+    <tariff name="Test Tarif 1" operatorName="Velcom" openDate="2015-04-11" closeDate="2017-08-10">
         <payRoll>14</payRoll>
         <callPrices onFavoriteNumber="0.05">
             <insideNetwork>0.1</insideNetwork>
