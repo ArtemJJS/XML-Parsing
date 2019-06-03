@@ -2,7 +2,7 @@
 <tariffs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://anelkin.by/telecom telecom.xsd"
          xmlns="http://anelkin.by/telecom">
-    <tariff name="Test Tarif 1" operatorName="Velcom" openDate="2015-04-11" closeDate="2017-08-10" id="VL123251">
+    <tariff id="VL100101" name="Privet Light" operatorName="Velcom" openDate="2015-04-11" closeDate="2017-08-10">
         <payRoll>14</payRoll>
         <callPrices>
             <insideNetwork>0.1</insideNetwork>
@@ -17,7 +17,7 @@
             <activationPayment>10</activationPayment>
         </parameters>
     </tariff>
-    <tariff name="Test Tarif 2" operatorName="Velcom" openDate="2017-01-01" id="VL124122">
+    <tariff id="VL100102" name="Privet Active" operatorName="Velcom" openDate="2017-01-01" >
         <payRoll>5</payRoll>
         <callPrices>
             <insideNetwork>0</insideNetwork>
@@ -26,5 +26,194 @@
         </callPrices>
         <smsPrice>0.1</smsPrice>
         <parameters/>
+    </tariff>
+    <tariff id="VL100201" name="Stay In Connection 1" operatorName="Velcom" openDate="2016-04-08">
+        <payRoll>5</payRoll>
+        <callPrices>
+            <insideNetwork>0</insideNetwork>
+            <outsideNetwork>0.5</outsideNetwork>
+            <onLandLine>0.5</onLandLine>
+        </callPrices>
+        <smsPrice>.3</smsPrice>
+        <parameters>
+            <tarification>60</tarification>
+        </parameters>
+    </tariff>
+    <tariff id="VL100202" name="Stay In Connection 2" operatorName="Velcom" openDate="2016-04-08">
+        <payRoll>10</payRoll>
+        <callPrices>
+            <insideNetwork>0</insideNetwork>
+            <outsideNetwork>0.35</outsideNetwork>
+            <onLandLine>0.35</onLandLine>
+        </callPrices>
+        <smsPrice>0.2</smsPrice>
+        <parameters>
+            <tarification>60</tarification>
+        </parameters>
+    </tariff>
+    <tariff id="VL100203" name="Stay In Connection 3" operatorName="Velcom" openDate="2016-04-08">
+        <payRoll>20</payRoll>
+        <callPrices>
+            <insideNetwork>0</insideNetwork>
+            <outsideNetwork>0.2</outsideNetwork>
+            <onLandLine>0.2</onLandLine>
+        </callPrices>
+        <smsPrice>0.1</smsPrice>
+        <parameters>
+            <tarification>60</tarification>
+        </parameters>
+    </tariff>
+    <tariff id="VL103001" name="Active Light" operatorName="Velcom" openDate="2012-05-07" closeDate="2017-01-30">
+        <payRoll>0</payRoll>
+        <callPrices>
+            <insideNetwork>0.1</insideNetwork>
+            <outsideNetwork>0.3</outsideNetwork>
+            <onLandLine>0.3</onLandLine>
+            <onFavoriteNumber>0</onFavoriteNumber>
+        </callPrices>
+        <smsPrice>0.05</smsPrice>
+        <parameters>
+            <favoriteNumbersAmount>5</favoriteNumbersAmount>
+        </parameters>
+    </tariff>
+    <tariff id="MT100101" name="Зима!" operatorName="MTS" openDate="2015-05-02">
+        <payRoll>12</payRoll>
+        <callPrices>
+            <insideNetwork>0.05</insideNetwork>
+            <outsideNetwork>0.2</outsideNetwork>
+            <onLandLine>0.3</onLandLine>
+            <onFavoriteNumber>0</onFavoriteNumber>
+        </callPrices>
+        <smsPrice>0.05</smsPrice>
+        <parameters>
+            <favoriteNumbersAmount>5</favoriteNumbersAmount>
+            <tarification>30</tarification>
+            <activationPayment>5</activationPayment>
+        </parameters>
+    </tariff>
+    <tariff id="MT100102" name="Весна!" operatorName="MTS" openDate="2015-05-02">
+        <payRoll>10</payRoll>
+        <callPrices>
+            <insideNetwork>0.1</insideNetwork>
+            <outsideNetwork>0.3</outsideNetwork>
+            <onLandLine>0.4</onLandLine>
+            <onFavoriteNumber>0</onFavoriteNumber>
+        </callPrices>
+        <smsPrice>0.05</smsPrice>
+        <parameters>
+            <favoriteNumbersAmount>5</favoriteNumbersAmount>
+            <tarification>30</tarification>
+            <activationPayment>5</activationPayment>
+        </parameters>
+    </tariff>
+    <tariff id="MT100103" name="Осень!" operatorName="MTS" openDate="2015-05-02">
+        <payRoll>10</payRoll>
+        <callPrices>
+            <insideNetwork>0.15</insideNetwork>
+            <outsideNetwork>0.2</outsideNetwork>
+            <onLandLine>0.2</onLandLine>
+            <onFavoriteNumber>0</onFavoriteNumber>
+        </callPrices>
+        <smsPrice>0.05</smsPrice>
+        <parameters>
+            <favoriteNumbersAmount>5</favoriteNumbersAmount>
+            <tarification>30</tarification>
+            <activationPayment>5</activationPayment>
+        </parameters>
+    </tariff>
+    <tariff id="MT100104" name="Лето!" operatorName="MTS" openDate="2015-05-02">
+        <payRoll>5</payRoll>
+        <callPrices>
+            <insideNetwork>0.2</insideNetwork>
+            <outsideNetwork>0.25</outsideNetwork>
+            <onLandLine>0.25</onLandLine>
+            <onFavoriteNumber>0</onFavoriteNumber>
+        </callPrices>
+        <smsPrice>0.05</smsPrice>
+        <parameters>
+            <favoriteNumbersAmount>5</favoriteNumbersAmount>
+            <tarification>30</tarification>
+            <activationPayment>5</activationPayment>
+        </parameters>
+    </tariff>
+    <tariff id="MT102001" name="Your Line 1" operatorName="MTS" openDate="2014-01-04" closeDate="2018-03-04">
+        <payRoll>1</payRoll>
+        <callPrices>
+            <insideNetwork>0</insideNetwork>
+            <outsideNetwork>1</outsideNetwork>
+            <onLandLine>1</onLandLine>
+        </callPrices>
+        <smsPrice>0</smsPrice>
+        <parameters>
+            <activationPayment>10</activationPayment>
+        </parameters>
+    </tariff>
+    <tariff id="MT102002" name="Your Line 2" operatorName="MTS" openDate="2014-01-04" closeDate="2018-03-04">
+        <payRoll>10</payRoll>
+        <callPrices>
+            <insideNetwork>0</insideNetwork>
+            <outsideNetwork>0.5</outsideNetwork>
+            <onLandLine>0.5</onLandLine>
+        </callPrices>
+        <smsPrice>0</smsPrice>
+        <parameters>
+            <activationPayment>10</activationPayment>
+        </parameters>
+    </tariff>
+    <tariff id="LF101001" name="For You" operatorName="Life" openDate="2014-11-25">
+        <payRoll>10</payRoll>
+        <callPrices>
+            <insideNetwork>0.2</insideNetwork>
+            <outsideNetwork>0.2</outsideNetwork>
+            <onLandLine>0.2</onLandLine>
+            <onFavoriteNumber>0</onFavoriteNumber>
+        </callPrices>
+        <smsPrice>0.1</smsPrice>
+        <parameters>
+            <favoriteNumbersAmount>3</favoriteNumbersAmount>
+            <activationPayment>5</activationPayment>
+        </parameters>
+    </tariff>
+    <tariff id="LF101002" name="For Life" operatorName="Life" openDate="2014-11-25">
+        <payRoll>15</payRoll>
+        <callPrices>
+            <insideNetwork>0.17</insideNetwork>
+            <outsideNetwork>0.17</outsideNetwork>
+            <onLandLine>0.17</onLandLine>
+            <onFavoriteNumber>0</onFavoriteNumber>
+        </callPrices>
+        <smsPrice>0.1</smsPrice>
+        <parameters>
+            <favoriteNumbersAmount>3</favoriteNumbersAmount>
+            <activationPayment>5</activationPayment>
+        </parameters>
+    </tariff>
+    <tariff id="LF101003" name="For ALL" operatorName="Life" openDate="2014-11-25">
+        <payRoll>20</payRoll>
+        <callPrices>
+            <insideNetwork>0.1</insideNetwork>
+            <outsideNetwork>0.1</outsideNetwork>
+            <onLandLine>0.1</onLandLine>
+            <onFavoriteNumber>0</onFavoriteNumber>
+        </callPrices>
+        <smsPrice>0.1</smsPrice>
+        <parameters>
+            <favoriteNumbersAmount>3</favoriteNumbersAmount>
+            <activationPayment>5</activationPayment>
+        </parameters>
+    </tariff>
+    <tariff id="LF102001" name="Flexible" operatorName="Life" openDate="2014-11-25" closeDate="2017-12-31">
+        <payRoll>12</payRoll>
+        <callPrices>
+            <insideNetwork>0.1</insideNetwork>
+            <outsideNetwork>0.1</outsideNetwork>
+            <onLandLine>0.3</onLandLine>
+            <onFavoriteNumber>0</onFavoriteNumber>
+        </callPrices>
+        <smsPrice>0.1</smsPrice>
+        <parameters>
+            <favoriteNumbersAmount>3</favoriteNumbersAmount>
+            <activationPayment>10</activationPayment>
+        </parameters>
     </tariff>
 </tariffs>

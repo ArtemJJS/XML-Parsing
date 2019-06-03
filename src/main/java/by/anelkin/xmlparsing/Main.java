@@ -1,6 +1,8 @@
 package by.anelkin.xmlparsing;
 
 import by.anelkin.xmlparsing.entity.Tariff;
+import by.anelkin.xmlparsing.parser.BuilderTariff;
+import by.anelkin.xmlparsing.parser.BuilderTariffDom;
 import by.anelkin.xmlparsing.parser.BuilderTariffStax;
 import by.anelkin.xmlparsing.validator.XMLFileValidator;
 import org.apache.log4j.Logger;
@@ -32,6 +34,15 @@ public class Main {
         System.out.println(tariffs.size());
 
         System.out.println("====================");
+
+        BuilderTariffDom builderTariffDom = new BuilderTariffDom();
+            List<Tariff> list = new ArrayList<>();
+        try {
+            list = builderTariffDom.parse(new FileInputStream("src/main/resources/data/tariffs.xml"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        System.out.println(list);
 
     }
 }

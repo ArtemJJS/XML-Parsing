@@ -32,6 +32,9 @@ public class Tariff {
         FAVORITENUMBERSAMOUNT
     }
 
+    public Tariff() {
+    }
+
     public Tariff(String id, String name, String operatorName, BigDecimal payRoll, Map<CallPriceParameters, BigDecimal> callPrices,
                   BigDecimal smsPrice, Map<Parameters, String> parameters, Date openDate, Date closeDate) {
         this.id = id;
@@ -128,6 +131,6 @@ public class Tariff {
     }
 
     public void setCloseDate(Date closeDate) {
-        this.closeDate = closeDate;
+        this.closeDate = closeDate == null ? DEFAULT_CLOSE_DATE : closeDate;
     }
 }

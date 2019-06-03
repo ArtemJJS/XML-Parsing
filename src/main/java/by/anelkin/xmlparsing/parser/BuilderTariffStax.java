@@ -24,10 +24,14 @@ public class BuilderTariffStax implements BuilderTariff {
     private Map<CallPriceParameters, BigDecimal> callPrices = new HashMap<>();
     private BigDecimal smsPrice;
     private Map<Parameters, String> parameters = new HashMap<>();
+    private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
 
 
     @Override
     public List<Tariff> parse(InputStream inputStream) {
+        if (inputStream == null) {
+            throw new RuntimeException("InputStream to parse = null !!!");
+        }
         List<Tariff> tariffs = new ArrayList<>();
         XMLInputFactory inputFactory =
                 XMLInputFactory.newInstance();
@@ -43,7 +47,6 @@ public class BuilderTariffStax implements BuilderTariff {
 
     private List<Tariff> doParsing(XMLStreamReader reader) throws XMLStreamException {
         List<Tariff> tariffs = new ArrayList<>();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         while (reader.hasNext()) {
             String tagName;
             int type = reader.next();
@@ -93,14 +96,14 @@ public class BuilderTariffStax implements BuilderTariff {
                                         break;
                                     case OPENDATE:
                                         try {
-                                            openDate = dateFormat.parse(reader.getAttributeValue(i));
+                                            openDate = DATE_FORMAT.parse(reader.getAttributeValue(i));
                                         } catch (ParseException e) {
                                             e.printStackTrace();
                                         }
                                         break;
                                     case CLOSEDATE:
                                         try {
-                                            closeDate = dateFormat.parse(reader.getAttributeValue(i));
+                                            closeDate = DATE_FORMAT.parse(reader.getAttributeValue(i));
                                         } catch (ParseException e) {
                                             e.printStackTrace();
                                         }
