@@ -24,3 +24,53 @@
 2019-06-02 22:45:20 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
 2019-06-02 22:45:52 main DEBUG Main:17 - Start of Main
 2019-06-02 22:45:52 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 20:39:04 main DEBUG Main:18 - Start of Main
+2019-06-03 20:39:04 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 20:39:45 main DEBUG Main:18 - Start of Main
+2019-06-03 20:39:45 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 20:40:03 main DEBUG Main:18 - Start of Main
+2019-06-03 20:40:04 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 20:40:30 main DEBUG Main:18 - Start of Main
+2019-06-03 20:40:31 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 20:45:52 main DEBUG Main:18 - Start of Main
+2019-06-03 20:45:53 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 20:46:06 main DEBUG Main:18 - Start of Main
+2019-06-03 20:46:07 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 20:50:25 main DEBUG Main:21 - Start of Main
+2019-06-03 20:50:25 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 20:54:23 main DEBUG Main:21 - Start of Main
+2019-06-03 20:54:24 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 20:58:18 main DEBUG Main:21 - Start of Main
+2019-06-03 20:58:18 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 22:32:24 main DEBUG Main:21 - Start of Main
+2019-06-03 22:32:25 main ERROR SchemaErrorHandler:21 - 5 : 113 - cvc-pattern-valid: Value 'A123251' is not facet-valid with respect to pattern '[A-Z]{2}\d{6}' for type 'Tariff-ID'.
+2019-06-03 22:32:25 main ERROR SchemaErrorHandler:21 - 5 : 113 - cvc-attribute.3: The value 'A123251' of attribute 'id' on element 'tariff' is not valid with respect to its type, 'Tariff-ID'.
+2019-06-03 22:32:25 main ERROR SchemaErrorHandler:21 - 16 : 77 - cvc-complex-type.4: Attribute 'id' must appear on element 'tariff'.
+2019-06-03 22:33:01 main DEBUG Main:21 - Start of Main
+2019-06-03 22:33:01 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 22:37:21 main DEBUG Main:19 - Start of Main
+2019-06-03 22:37:21 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 22:39:49 main DEBUG Main:19 - Start of Main
+2019-06-03 22:39:50 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 22:40:03 main DEBUG Main:19 - Start of Main
+2019-06-03 22:40:04 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 22:51:16 main DEBUG Main:19 - Start of Main
+2019-06-03 22:51:17 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 22:52:09 main DEBUG Main:19 - Start of Main
+2019-06-03 22:52:10 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 22:52:47 main DEBUG Main:19 - Start of Main
+2019-06-03 22:52:47 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 22:59:59 main DEBUG Main:19 - Start of Main
+2019-06-03 23:00:00 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 23:01:14 main DEBUG Main:19 - Start of Main
+2019-06-03 23:01:14 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 23:02:18 main DEBUG Main:19 - Start of Main
+2019-06-03 23:02:18 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 23:03:40 main DEBUG Main:19 - Start of Main
+2019-06-03 23:03:40 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 23:09:39 main DEBUG Main:19 - Start of Main
+2019-06-03 23:09:39 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 23:11:05 main DEBUG Main:19 - Start of Main
+2019-06-03 23:11:06 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 23:14:36 main DEBUG Main:19 - Start of Main
+2019-06-03 23:14:36 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.

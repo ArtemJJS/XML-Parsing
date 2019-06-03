@@ -2,16 +2,25 @@
 <tariffs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://anelkin.by/telecom telecom.xsd"
          xmlns="http://anelkin.by/telecom">
-    <tariff name="Test Tarif 1" operatorName="Velcom" openDate="2015-04-11" closeDate="2017-08-10">
+    <tariff name="Test Tarif 1" operatorName="Velcom" openDate="2015-04-11" closeDate="2017-08-10" id="VL123251">
         <payRoll>14</payRoll>
-        <callPrices onFavoriteNumber="0.05" insideNetwork="0.1" outsideNetwork="0.2" onLandLine="0.25"/>
+        <callPrices>
+            <insideNetwork>0.1</insideNetwork>
+            <outsideNetwork>0.2</outsideNetwork>
+            <onLandLine>0.25</onLandLine>
+            <onFavoriteNumber>0</onFavoriteNumber>
+        </callPrices>
         <smsPrice>0.05</smsPrice>
         <parameters activationPayment="10" favoriteNumbersAmount="3" tarification="12"/>
     </tariff>
-    <tariff name="Test Tarif 2" operatorName="Velcom" openDate="2017-01-01">
+    <tariff name="Test Tarif 2" operatorName="Velcom" openDate="2017-01-01" id="VL124122">
         <payRoll>5</payRoll>
-        <callPrices insideNetwork="0.2" onLandLine="0.35" outsideNetwork="0.2"/>
+        <callPrices>
+            <insideNetwork>0</insideNetwork>
+            <outsideNetwork>0.5</outsideNetwork>
+            <onLandLine>0.5</onLandLine>
+        </callPrices>
         <smsPrice>0.1</smsPrice>
-        <parameters favoriteNumbersAmount="5"/>
+        <parameters/>
     </tariff>
 </tariffs>

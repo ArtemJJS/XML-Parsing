@@ -7,6 +7,8 @@ import org.apache.log4j.Logger;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,6 +32,9 @@ public class Main {
         }
         System.out.println(tariffs);
         System.out.println(tariffs.size());
+
+        System.out.println("====================");
+
     }
 }
 

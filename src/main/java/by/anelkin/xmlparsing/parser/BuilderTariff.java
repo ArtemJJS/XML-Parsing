@@ -15,17 +15,26 @@ public interface BuilderTariff {
 
     Tariff getTariff();
 
-    public enum ParserEnum {
+
+    enum ParserEnum {
         //it doesn't works without TARIFFS!
         TARIFFS,
         TARIFF,
         PAYROLL,
         CALLPRICES,
         SMSPRICE,
-        PARAMETERS
+        PARAMETERS,
+        INSIDENETWORK,
+        OUTSIDENETWORK,
+        ONLANDLINE,
+        ONFAVORITENUMBER,
+        FAVORITENUMBERSAMOUNT,
+        TARIFICATION,
+        ACTIVATIONPAYMENT
     }
 
-    public enum TariffAttribute {
+   enum TariffAttribute {
+        ID,
         NAME,
         OPERATORNAME,
         OPENDATE,

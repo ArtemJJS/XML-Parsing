@@ -18,18 +18,20 @@
             <element name="smsPrice" type="tns:positiveDecimal"/>
             <element name="parameters" type="tns:tariffParameters"/>
         </sequence>
+        <attribute name="id" type="tns:Tariff-ID" use="required"/>
         <attribute name="name" type="string" use="required"/>
         <attribute name="operatorName" type="string" use="required"/>
-        <!--attributes are optional by default -->
         <attribute name="openDate" type="date" use="required"/>
         <attribute name="closeDate" type="date"/>
     </complexType>
 
     <complexType name="callPricePlan">
-        <attribute name="insideNetwork" type="tns:positiveDecimal" use="required"/>
-        <attribute name="outsideNetwork" type="tns:positiveDecimal" use="required"/>
-        <attribute name="onLandLine" type="tns:positiveDecimal" use="required"/>
-        <attribute name="onFavoriteNumber" type="tns:positiveDecimal" default="0"/>
+        <sequence>
+            <element name="insideNetwork" type="tns:positiveDecimal"/>
+            <element name="outsideNetwork" type="tns:positiveDecimal"/>
+            <element name="onLandLine" type="tns:positiveDecimal"/>
+            <element name="onFavoriteNumber" type="tns:positiveDecimal" minOccurs="0"/>
+        </sequence>
     </complexType>
 
     <complexType name="tariffParameters">
@@ -50,6 +52,13 @@
             <enumeration value="12"/>
             <enumeration value="30"/>
             <enumeration value="60"/>
+        </restriction>
+    </simpleType>
+
+
+    <simpleType name="Tariff-ID">
+        <restriction base="ID">
+            <pattern value="[A-Z]{2}\d{6}"/>
         </restriction>
     </simpleType>
 </schema>

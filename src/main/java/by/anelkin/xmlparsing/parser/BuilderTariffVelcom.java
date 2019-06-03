@@ -1,22 +1,21 @@
 package by.anelkin.xmlparsing.parser;
 
 import by.anelkin.xmlparsing.instance.Tariff;
-import by.anelkin.xmlparsing.instance.TariffVelcom;
 
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 import java.io.InputStream;
-import java.io.StringReader;
 import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-import static by.anelkin.xmlparsing.instance.TariffVelcom.*;
+import static by.anelkin.xmlparsing.instance.Tariff.*;
 
 public class BuilderTariffVelcom implements BuilderTariff {
+    private String id;
     private String name;
     private String operatorName;
     private Date openDate;
@@ -45,102 +44,73 @@ public class BuilderTariffVelcom implements BuilderTariff {
 
     private List<Tariff> doParsing(XMLStreamReader reader) throws XMLStreamException {
         List<Tariff> tariffs = new ArrayList<>();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         while (reader.hasNext()) {
             String tagName;
             int type = reader.next();
             switch (type) {
-                case XMLStreamConstants.START_ELEMENT:
+                case XMLStreamConstants.START_ELEMENT: {
                     tagName = reader.getLocalName().toUpperCase();
                     switch (ParserEnum.valueOf(tagName)) {
-                        case PAYROLL: {
+                        case PAYROLL:
                             payRoll = new BigDecimal(reader.getElementText());
-                            System.out.println("payRoll: " + payRoll);
                             break;
-                        }
-                        case SMSPRICE: {
+                        case SMSPRICE:
                             smsPrice = new BigDecimal(reader.getElementText());
-                            System.out.println("SmsPrice: " + smsPrice);
                             break;
-                        }
+                        case ONLANDLINE:
+                            callPrices.put(CallPriceParameters.ONLANDLINE, new BigDecimal(reader.getElementText()));
+                            break;
+                        case ONFAVORITENUMBER:
+                            callPrices.put(CallPriceParameters.ONFAVORITENUMBER, new BigDecimal(reader.getElementText()));
+                            break;
+                        case OUTSIDENETWORK:
+                            callPrices.put(CallPriceParameters.OUTSIDENETWORK, new BigDecimal(reader.getElementText()));
+                            break;
+                        case INSIDENETWORK:
+                            callPrices.put(CallPriceParameters.INSIDENETWORK, new BigDecimal(reader.getElementText()));
+                            break;
+                        case ACTIVATIONPAYMENT:
+                            parameters.put(Parameters.ACTIVATIONPAYMENT, reader.getElementText());
+                            break;
+                        case FAVORITENUMBERSAMOUNT:
+                            parameters.put(Parameters.FAVORITENUMBERSAMOUNT, reader.getElementText());
+                            break;
+                        case TARIFICATION:
+                            parameters.put(Parameters.TARIFICATION, reader.getElementText());
+                            break;
                         case TARIFF: {
                             for (int i = 0; i < reader.getAttributeCount(); i++) {
                                 String attributeName = reader.getAttributeLocalName(i).toUpperCase();
                                 switch (TariffAttribute.valueOf(attributeName)) {
-                                    case NAME: {
-                                        name = reader.getAttributeValue(0);
-                                        System.out.println("Name: " + name);
+                                    case ID:
+                                        id = reader.getAttributeValue(i);
                                         break;
-                                    }
-                                    case OPERATORNAME: {
-                                        operatorName = reader.getAttributeValue(1);
-                                        System.out.println("operatorName: " + operatorName);
+                                    case NAME:
+                                        name = reader.getAttributeValue(i);
                                         break;
-                                    }
-                                    case OPENDATE: {
-                                        SimpleDateFormat dateFormat = new SimpleDateFormat("YYYY-MM-DD");
+                                    case OPERATORNAME:
+                                        operatorName = reader.getAttributeValue(i);
+                                        break;
+                                    case OPENDATE:
                                         try {
-                                            openDate = dateFormat.parse(reader.getAttributeValue(2));
-                                            System.out.println("OpenDate: " + openDate);
+                                            openDate = dateFormat.parse(reader.getAttributeValue(i));
                                         } catch (ParseException e) {
                                             e.printStackTrace();
                                         }
                                         break;
-                                    }
-                                    case CLOSEDATE: {
-                                        SimpleDateFormat dateFormat = new SimpleDateFormat("YYYY-MM-DD");
+                                    case CLOSEDATE:
                                         try {
-                                            closeDate = dateFormat.parse(reader.getAttributeValue(3));
-                                            System.out.println("CloseDate: " + closeDate);
+                                            closeDate = dateFormat.parse(reader.getAttributeValue(i));
                                         } catch (ParseException e) {
                                             e.printStackTrace();
                                         }
-                                    }
                                 }
                             }
-                            break;
-                        }
-                        case CALLPRICES: {
-                            for (int i = 0; i < reader.getAttributeCount(); i++) {
-                                String attributeName = reader.getAttributeLocalName(i).toUpperCase();
-                                switch (CallPriceParameters.valueOf(attributeName)) {
-                                    case ONLANDLINE: {
-                                        callPrices.put(CallPriceParameters.ONLANDLINE, new BigDecimal(reader.getAttributeValue(i)));
-                                        break;
-                                    }
-                                    case ONFAVORITENUMBER: {
-                                        callPrices.put(CallPriceParameters.ONFAVORITENUMBER, new BigDecimal(reader.getAttributeValue(i)));
-                                        break;
-                                    }
-                                    case OUTSIDENETWORK: {
-                                        callPrices.put(CallPriceParameters.OUTSIDENETWORK, new BigDecimal(reader.getAttributeValue(i)));
-                                        break;
-                                    }
-                                    case INSIDENETWORK: {
-                                        callPrices.put(CallPriceParameters.INSIDENETWORK, new BigDecimal(reader.getAttributeValue(i)));
-                                    }
-                                }
-                            }
-                            System.out.println(callPrices);
-                            break;
-                        }
-                        case PARAMETERS: {
-                            for (int i = 0; i < reader.getAttributeCount(); i++) {
-                                String attributeName = reader.getAttributeLocalName(i).toUpperCase();
-                                switch (Parameters.valueOf(attributeName)) {
-                                    case ACTIVATIONPAYMENT:
-                                        parameters.put(Parameters.ACTIVATIONPAYMENT, reader.getAttributeValue(i));
-                                        break;
-                                    case FAVORITENUMBERSAMOUNT:
-                                        parameters.put(Parameters.FAVORITENUMBERSAMOUNT, reader.getAttributeValue(i));
-                                        break;
-                                    case TARIFICATION:
-                                        parameters.put(Parameters.TARIFICATION, reader.getAttributeValue(i));
-                                }
-                            }
-                            System.out.println(parameters);
                         }
                     }
                     break;
+                }
                 case XMLStreamConstants.END_ELEMENT: {
                     if (reader.getLocalName().equals("tariff")) {
                         tariffs.add(getTariff());
@@ -154,19 +124,20 @@ public class BuilderTariffVelcom implements BuilderTariff {
 
     @Override
     public void reset() {
-        String name = null;
-        String operatorName = null;
-        Date openDate = null;
-        Date closeDate = null;
-        BigDecimal payRoll = null;
-        Map<CallPriceParameters, BigDecimal> callPrices = new HashMap<>();
-        BigDecimal smsPrice = null;
-        Map<TarifParameters, String> parameters = new HashMap<>();
+        name = null;
+        operatorName = null;
+        openDate = null;
+        closeDate = null;
+        payRoll = null;
+        callPrices = new HashMap<>();
+        smsPrice = null;
+        parameters = new HashMap<>();
+        id = null;
     }
 
     @Override
     public Tariff getTariff() {
-        Tariff tariff = new TariffVelcom(name, operatorName, payRoll, callPrices, smsPrice, parameters);
-        return tariff;
+        return new Tariff(id, name, operatorName, payRoll,
+                callPrices, smsPrice, parameters, openDate, closeDate);
     }
 }
