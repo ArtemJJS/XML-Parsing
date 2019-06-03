@@ -1,4 +1,4 @@
-package by.anelkin.xmlparsing.instance;
+package by.anelkin.xmlparsing.entity;
 
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
@@ -15,7 +15,7 @@ public class Tariff {
     private Map<Parameters, String> parameters;
     private Date openDate;
     private Date closeDate;
-    //default date 01.01.2030
+    //default closeDate 01.01.2030
     private static final Date DEFAULT_CLOSE_DATE = new Date(1893448800000L);
     private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
 
@@ -27,9 +27,9 @@ public class Tariff {
     }
 
     public enum Parameters {
-        FAVORITENUMBERSAMOUNT,
         TARIFICATION,
-        ACTIVATIONPAYMENT
+        ACTIVATIONPAYMENT,
+        FAVORITENUMBERSAMOUNT
     }
 
     public Tariff(String id, String name, String operatorName, BigDecimal payRoll, Map<CallPriceParameters, BigDecimal> callPrices,
@@ -49,13 +49,13 @@ public class Tariff {
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
-        builder.append("Tariff{ID: " + id + " || Name: " + name + ", || OperatorName: " + operatorName);
-        builder.append(", || OpenDate: ").append(DATE_FORMAT.format(openDate));
+        builder.append("Tariff{ID: " + id + " | Name: " + name + " | OperatorName: " + operatorName);
+        builder.append(" | OpenDate: ").append(DATE_FORMAT.format(openDate));
         if (closeDate != null) {
-            builder.append(", || CloseDate: ").append(DATE_FORMAT.format(closeDate));
+            builder.append(" | CloseDate: ").append(DATE_FORMAT.format(closeDate));
         }
-        builder.append(", || PayRoll: " + payRoll + ", || CallPrices: " + callPrices + ", || SmsPrice: " + smsPrice
-                + ", || Parameters: " + parameters + "\n");
+        builder.append(" | PayRoll: " + payRoll + " | CallPrices: " + callPrices + " | SmsPrice: " + smsPrice
+                + " | Parameters: " + parameters + "\n");
         return builder.toString();
     }
 

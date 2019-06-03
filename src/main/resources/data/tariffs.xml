@@ -11,7 +11,11 @@
             <onFavoriteNumber>0</onFavoriteNumber>
         </callPrices>
         <smsPrice>0.05</smsPrice>
-        <parameters activationPayment="10" favoriteNumbersAmount="3" tarification="12"/>
+        <parameters>
+            <favoriteNumbersAmount>3</favoriteNumbersAmount>
+            <tarification>12</tarification>
+            <activationPayment>10</activationPayment>
+        </parameters>
     </tariff>
     <tariff name="Test Tarif 2" operatorName="Velcom" openDate="2017-01-01" id="VL124122">
         <payRoll>5</payRoll>

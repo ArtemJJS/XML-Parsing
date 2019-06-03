@@ -1,14 +1,12 @@
 package by.anelkin.xmlparsing;
 
-import by.anelkin.xmlparsing.instance.Tariff;
-import by.anelkin.xmlparsing.parser.BuilderTariffVelcom;
+import by.anelkin.xmlparsing.entity.Tariff;
+import by.anelkin.xmlparsing.parser.BuilderTariffStax;
 import by.anelkin.xmlparsing.validator.XMLFileValidator;
 import org.apache.log4j.Logger;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +21,7 @@ public class Main {
 
         System.out.println("Проверка завершена.");
 
-        BuilderTariffVelcom builderTariffVelcom = new BuilderTariffVelcom();
+        BuilderTariffStax builderTariffVelcom = new BuilderTariffStax();
         List<Tariff> tariffs = new ArrayList<>();
         try {
             tariffs = builderTariffVelcom.parse(new FileInputStream("src/main/resources/data/tariffs.xml"));

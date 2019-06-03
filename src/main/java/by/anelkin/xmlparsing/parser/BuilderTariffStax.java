@@ -1,6 +1,6 @@
 package by.anelkin.xmlparsing.parser;
 
-import by.anelkin.xmlparsing.instance.Tariff;
+import by.anelkin.xmlparsing.entity.Tariff;
 
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
@@ -12,9 +12,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-import static by.anelkin.xmlparsing.instance.Tariff.*;
+import static by.anelkin.xmlparsing.entity.Tariff.*;
 
-public class BuilderTariffVelcom implements BuilderTariff {
+public class BuilderTariffStax implements BuilderTariff {
     private String id;
     private String name;
     private String operatorName;
@@ -23,7 +23,6 @@ public class BuilderTariffVelcom implements BuilderTariff {
     private BigDecimal payRoll;
     private Map<CallPriceParameters, BigDecimal> callPrices = new HashMap<>();
     private BigDecimal smsPrice;
-    // TODO: 6/2/2019 нормально ли сюда стрин вставлять?:
     private Map<Parameters, String> parameters = new HashMap<>();
 
 
@@ -122,8 +121,8 @@ public class BuilderTariffVelcom implements BuilderTariff {
         return tariffs;
     }
 
-    @Override
-    public void reset() {
+
+    private void reset() {
         name = null;
         operatorName = null;
         openDate = null;
@@ -135,8 +134,8 @@ public class BuilderTariffVelcom implements BuilderTariff {
         id = null;
     }
 
-    @Override
-    public Tariff getTariff() {
+
+    private Tariff getTariff() {
         return new Tariff(id, name, operatorName, payRoll,
                 callPrices, smsPrice, parameters, openDate, closeDate);
     }

@@ -74,3 +74,37 @@
 2019-06-03 23:11:06 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
 2019-06-03 23:14:36 main DEBUG Main:19 - Start of Main
 2019-06-03 23:14:36 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 23:21:20 main DEBUG Main:17 - Start of Main
+2019-06-03 23:21:20 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 23:21:43 main DEBUG Main:17 - Start of Main
+2019-06-03 23:21:44 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 23:37:38 main DEBUG Main:17 - Start of Main
+2019-06-03 23:37:39 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 23:39:47 main DEBUG Main:17 - Start of Main
+2019-06-03 23:39:47 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 23:40:36 main DEBUG Main:17 - Start of Main
+2019-06-03 23:40:36 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 23:40:50 main DEBUG Main:17 - Start of Main
+2019-06-03 23:40:50 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 23:41:52 main DEBUG Main:17 - Start of Main
+2019-06-03 23:41:52 main ERROR SchemaErrorHandler:21 - 14 : 89 - cvc-complex-type.3.2.2: Attribute 'activationPayment' is not allowed to appear in element 'parameters'.
+2019-06-03 23:41:52 main ERROR SchemaErrorHandler:21 - 14 : 89 - cvc-complex-type.3.2.2: Attribute 'favoriteNumbersAmount' is not allowed to appear in element 'parameters'.
+2019-06-03 23:41:52 main ERROR SchemaErrorHandler:21 - 14 : 89 - cvc-complex-type.3.2.2: Attribute 'tarification' is not allowed to appear in element 'parameters'.
+2019-06-03 23:41:52 main ERROR SchemaErrorHandler:21 - 14 : 89 - cvc-complex-type.2.4.b: The content of element 'parameters' is not complete. One of '{"http://anelkin.by/telecom":favoriteNumbersAmount}' is expected.
+2019-06-03 23:41:52 main ERROR SchemaErrorHandler:21 - 24 : 22 - cvc-complex-type.2.4.b: The content of element 'parameters' is not complete. One of '{"http://anelkin.by/telecom":favoriteNumbersAmount}' is expected.
+2019-06-03 23:45:21 main DEBUG Main:17 - Start of Main
+2019-06-03 23:45:22 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 23:46:33 main DEBUG Main:17 - Start of Main
+2019-06-03 23:46:34 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 23:46:42 main DEBUG Main:17 - Start of Main
+2019-06-03 23:46:42 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 23:47:15 main DEBUG Main:17 - Start of Main
+2019-06-03 23:47:15 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 23:51:38 main DEBUG Main:17 - Start of Main
+2019-06-03 23:51:38 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 23:56:12 main DEBUG Main:17 - Start of Main
+2019-06-03 23:56:12 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 23:57:25 main DEBUG Main:17 - Start of Main
+2019-06-03 23:57:25 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-03 23:58:03 main DEBUG Main:17 - Start of Main
+2019-06-03 23:58:03 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.

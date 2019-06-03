@@ -35,9 +35,11 @@
     </complexType>
 
     <complexType name="tariffParameters">
-        <attribute name="favoriteNumbersAmount" type="nonNegativeInteger" default="0"/>
-        <attribute name="tarification" type="tns:tarificationInterval" default="60"/>
-        <attribute name="activationPayment" type="tns:positiveDecimal" default="0"/>
+        <sequence>
+            <element name="favoriteNumbersAmount" type="nonNegativeInteger" minOccurs="0"/>
+            <element name="tarification" type="tns:tarificationInterval" minOccurs="0"/>
+            <element name="activationPayment" type="tns:positiveDecimal" minOccurs="0"/>
+        </sequence>
     </complexType>
 
     <simpleType name="positiveDecimal">
