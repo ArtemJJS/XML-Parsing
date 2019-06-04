@@ -1,4 +1,4 @@
-package by.anelkin.xmlparsing.parser;
+package by.anelkin.xmlparsing.builder;
 
 import by.anelkin.xmlparsing.entity.Tariff;
 import org.w3c.dom.Document;
@@ -53,19 +53,19 @@ public class BuilderTariffDom implements BuilderTariff {
             tariff.setID(element.getAttribute("id"));
             tariff.setName(element.getAttribute("name"));
             tariff.setOperatorName(element.getAttribute("operatorName"));
+            tariff.setSmsPrice(new BigDecimal(getChildByName(element, "smsPrice").getTextContent()));
+            tariff.setPayRoll(new BigDecimal(getChildByName(element, "payRoll").getTextContent()));
             try {
                 tariff.setOpenDate(DATE_FORMAT.parse(element.getAttribute("openDate")));
 
                 String closeDateString = element.getAttribute("closeDate");
-                Date closeDate = closeDateString.isEmpty() ? null : DATE_FORMAT.parse(closeDateString);
-                //if closeDate == null, it will be changed to default inside setCloseDate():
-                tariff.setCloseDate(closeDate);
+                if (!closeDateString.isEmpty()) {
+                    tariff.setCloseDate(DATE_FORMAT.parse(closeDateString));
+                }
             } catch (ParseException e) {
                 e.printStackTrace();
             }
 
-            tariff.setSmsPrice(new BigDecimal(getChildByName(element, "smsPrice").getTextContent()));
-            tariff.setPayRoll(new BigDecimal(getChildByName(element, "payRoll").getTextContent()));
 
             Element callPricesElement = getChildByName(element, "callPrices");
             tariff.setCallPrices(fillCallPrices(callPricesElement));
@@ -90,17 +90,17 @@ public class BuilderTariffDom implements BuilderTariff {
         Map<CallPriceParameters, BigDecimal> callPrices = new HashMap<>();
 
         Element insideNetwork = getChildByName(callPricesElement, "insideNetwork");
-        callPrices.put(INSIDENETWORK, new BigDecimal(insideNetwork.getTextContent()));
+        callPrices.put(INSIDE_NETWORK, new BigDecimal(insideNetwork.getTextContent()));
 
         Element outsideNetwork = getChildByName(callPricesElement, "outsideNetwork");
-        callPrices.put(OUTSIDENETWORK, new BigDecimal(outsideNetwork.getTextContent()));
+        callPrices.put(OUTSIDE_NETWORK, new BigDecimal(outsideNetwork.getTextContent()));
 
         Element onLandLine = getChildByName(callPricesElement, "onLandLine");
-        callPrices.put(ONLANDLINE, new BigDecimal(onLandLine.getTextContent()));
+        callPrices.put(ON_LAND_LINE, new BigDecimal(onLandLine.getTextContent()));
 
         Element onFavoriteNumber = getChildByName(callPricesElement, "onFavoriteNumber");
         if (onFavoriteNumber != null) {
-            callPrices.put(ONFAVORITENUMBER, new BigDecimal(onFavoriteNumber.getTextContent()));
+            callPrices.put(ON_FAVORITE_NUMBER, new BigDecimal(onFavoriteNumber.getTextContent()));
         }
 
         return callPrices;
@@ -115,11 +115,11 @@ public class BuilderTariffDom implements BuilderTariff {
         }
         Element activationPayment = getChildByName(parametersElement, "activationPayment");
         if (activationPayment != null) {
-            parameters.put(ACTIVATIONPAYMENT, activationPayment.getTextContent());
+            parameters.put(ACTIVATION_PAYMENT, activationPayment.getTextContent());
         }
         Element favoriteNumbersAmount = getChildByName(parametersElement, "favoriteNumbersAmount");
         if (favoriteNumbersAmount != null) {
-            parameters.put(FAVORITENUMBERSAMOUNT, favoriteNumbersAmount.getTextContent());
+            parameters.put(FAVORITE_NUMBERS_AMOUNT, favoriteNumbersAmount.getTextContent());
         }
 
         return parameters;

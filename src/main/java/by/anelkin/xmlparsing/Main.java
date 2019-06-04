@@ -1,9 +1,9 @@
 package by.anelkin.xmlparsing;
 
+import by.anelkin.xmlparsing.builder.BuilderTariffSax;
 import by.anelkin.xmlparsing.entity.Tariff;
-import by.anelkin.xmlparsing.parser.BuilderTariff;
-import by.anelkin.xmlparsing.parser.BuilderTariffDom;
-import by.anelkin.xmlparsing.parser.BuilderTariffStax;
+import by.anelkin.xmlparsing.builder.BuilderTariffDom;
+import by.anelkin.xmlparsing.builder.BuilderTariffStax;
 import by.anelkin.xmlparsing.validator.XMLFileValidator;
 import org.apache.log4j.Logger;
 
@@ -24,26 +24,58 @@ public class Main {
         System.out.println("Проверка завершена.");
 
         BuilderTariffStax builderTariffVelcom = new BuilderTariffStax();
-        List<Tariff> tariffs = new ArrayList<>();
+        List<Tariff> listStax = new ArrayList<>();
         try {
-            tariffs = builderTariffVelcom.parse(new FileInputStream("src/main/resources/data/tariffs.xml"));
+            listStax = builderTariffVelcom.parse(new FileInputStream("src/main/resources/data/tariffs.xml"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        System.out.println(tariffs);
-        System.out.println(tariffs.size());
+//        System.out.println(listStax);
+//        System.out.println(listStax.size());
 
         System.out.println("====================");
 
         BuilderTariffDom builderTariffDom = new BuilderTariffDom();
-            List<Tariff> list = new ArrayList<>();
+        List<Tariff> listDom = new ArrayList<>();
         try {
-            list = builderTariffDom.parse(new FileInputStream("src/main/resources/data/tariffs.xml"));
+            listDom = builderTariffDom.parse(new FileInputStream("src/main/resources/data/tariffs.xml"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        System.out.println(list);
+//        System.out.println(listDom);
+//        System.out.println(listDom.size());
 
+
+        System.out.println("====================");
+
+        BuilderTariffSax builderTariffSax = new BuilderTariffSax();
+        List<Tariff> listSax = new ArrayList<>();
+        try {
+            listSax = builderTariffSax.parse(new FileInputStream("src/main/resources/data/tariffs.xml"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+//        System.out.println(listSax);
+//        System.out.println(listSax.size());
+
+
+        System.out.println("======================");
+
+        for (int i = 0; i < listSax.size(); i++) {
+            if (!listSax.get(i).equals(listDom.get(i)) || !listSax.get(i).equals(listStax.get(i))) {
+                System.out.println("NOT EQUALS");
+                System.out.println(listSax.get(i));
+                System.out.println(listStax.get(i));
+                System.out.println(listDom.get(i));
+            }
+        }
+
+        System.out.println(listSax.get(0).hashCode() == listDom.get(0).hashCode()
+                && listSax.get(0).hashCode() == listStax.get(0).hashCode());
+
+
+        System.out.println(listSax.get(0).equals(listDom.get(0))
+                && listSax.get(0).equals(listStax.get(0)));
     }
 }
 

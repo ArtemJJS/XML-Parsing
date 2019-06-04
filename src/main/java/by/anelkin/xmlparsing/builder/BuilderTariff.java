@@ -1,4 +1,4 @@
-package by.anelkin.xmlparsing.parser;
+package by.anelkin.xmlparsing.builder;
 
 import by.anelkin.xmlparsing.entity.Tariff;
 

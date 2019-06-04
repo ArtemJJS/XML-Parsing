@@ -1,4 +1,4 @@
-package by.anelkin.xmlparsing.parser;
+package by.anelkin.xmlparsing.builder;
 
 import by.anelkin.xmlparsing.entity.Tariff;
 
@@ -21,8 +21,8 @@ public class BuilderTariffStax implements BuilderTariff {
     private Date openDate;
     private Date closeDate;
     private BigDecimal payRoll;
-    private Map<CallPriceParameters, BigDecimal> callPrices = new HashMap<>();
     private BigDecimal smsPrice;
+    private Map<CallPriceParameters, BigDecimal> callPrices = new HashMap<>();
     private Map<Parameters, String> parameters = new HashMap<>();
     private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
 
@@ -33,11 +33,9 @@ public class BuilderTariffStax implements BuilderTariff {
             throw new RuntimeException("InputStream to parse = null !!!");
         }
         List<Tariff> tariffs = new ArrayList<>();
-        XMLInputFactory inputFactory =
-                XMLInputFactory.newInstance();
+        XMLInputFactory inputFactory = XMLInputFactory.newInstance();
         try {
-            XMLStreamReader reader =
-                    inputFactory.createXMLStreamReader(inputStream);
+            XMLStreamReader reader = inputFactory.createXMLStreamReader(inputStream);
             tariffs.addAll(doParsing(reader));
         } catch (XMLStreamException e) {
             e.printStackTrace();
@@ -61,22 +59,22 @@ public class BuilderTariffStax implements BuilderTariff {
                             smsPrice = new BigDecimal(reader.getElementText());
                             break;
                         case ONLANDLINE:
-                            callPrices.put(CallPriceParameters.ONLANDLINE, new BigDecimal(reader.getElementText()));
+                            callPrices.put(CallPriceParameters.ON_LAND_LINE, new BigDecimal(reader.getElementText()));
                             break;
                         case ONFAVORITENUMBER:
-                            callPrices.put(CallPriceParameters.ONFAVORITENUMBER, new BigDecimal(reader.getElementText()));
+                            callPrices.put(CallPriceParameters.ON_FAVORITE_NUMBER, new BigDecimal(reader.getElementText()));
                             break;
                         case OUTSIDENETWORK:
-                            callPrices.put(CallPriceParameters.OUTSIDENETWORK, new BigDecimal(reader.getElementText()));
+                            callPrices.put(CallPriceParameters.OUTSIDE_NETWORK, new BigDecimal(reader.getElementText()));
                             break;
                         case INSIDENETWORK:
-                            callPrices.put(CallPriceParameters.INSIDENETWORK, new BigDecimal(reader.getElementText()));
+                            callPrices.put(CallPriceParameters.INSIDE_NETWORK, new BigDecimal(reader.getElementText()));
                             break;
                         case ACTIVATIONPAYMENT:
-                            parameters.put(Parameters.ACTIVATIONPAYMENT, reader.getElementText());
+                            parameters.put(Parameters.ACTIVATION_PAYMENT, reader.getElementText());
                             break;
                         case FAVORITENUMBERSAMOUNT:
-                            parameters.put(Parameters.FAVORITENUMBERSAMOUNT, reader.getElementText());
+                            parameters.put(Parameters.FAVORITE_NUMBERS_AMOUNT, reader.getElementText());
                             break;
                         case TARIFICATION:
                             parameters.put(Parameters.TARIFICATION, reader.getElementText());

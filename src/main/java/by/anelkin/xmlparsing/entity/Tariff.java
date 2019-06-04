@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
+import java.util.Objects;
 
 public class Tariff {
     private String id;
@@ -14,22 +15,22 @@ public class Tariff {
     private Map<CallPriceParameters, BigDecimal> callPrices;
     private Map<Parameters, String> parameters;
     private Date openDate;
-    private Date closeDate;
+    private Date closeDate = DEFAULT_CLOSE_DATE;
     //default closeDate 01.01.2030
     private static final Date DEFAULT_CLOSE_DATE = new Date(1893448800000L);
     private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
 
     public enum CallPriceParameters {
-        INSIDENETWORK,
-        OUTSIDENETWORK,
-        ONLANDLINE,
-        ONFAVORITENUMBER
+        INSIDE_NETWORK,
+        OUTSIDE_NETWORK,
+        ON_LAND_LINE,
+        ON_FAVORITE_NUMBER
     }
 
     public enum Parameters {
         TARIFICATION,
-        ACTIVATIONPAYMENT,
-        FAVORITENUMBERSAMOUNT
+        ACTIVATION_PAYMENT,
+        FAVORITE_NUMBERS_AMOUNT
     }
 
     public Tariff() {
@@ -60,6 +61,36 @@ public class Tariff {
         builder.append(" | PayRoll: " + payRoll + " | CallPrices: " + callPrices + " | SmsPrice: " + smsPrice
                 + " | Parameters: " + parameters + "\n");
         return builder.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || o.getClass()!=this.getClass()) return false;
+        Tariff tariff = (Tariff) o;
+        return Objects.equals(getId(), tariff.getId()) &&
+                Objects.equals(getName(), tariff.getName()) &&
+                Objects.equals(getOperatorName(), tariff.getOperatorName()) &&
+                Objects.equals(getPayRoll(), tariff.getPayRoll()) &&
+                Objects.equals(getSmsPrice(), tariff.getSmsPrice()) &&
+                Objects.equals(getCallPrices(), tariff.getCallPrices()) &&
+                Objects.equals(getParameters(), tariff.getParameters()) &&
+                Objects.equals(getOpenDate(), tariff.getOpenDate()) &&
+                Objects.equals(getCloseDate(), tariff.getCloseDate());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getName(), getOperatorName(), getPayRoll(),
+                getSmsPrice(), getCallPrices(), getParameters(), getOpenDate(), getCloseDate());
+    }
+
+    public void setCloseDate(Date closeDate) {
+        this.closeDate = closeDate;
+    }
+
+    public Date getCloseDate() {
+        return closeDate;
     }
 
     public String getId() {
@@ -124,13 +155,5 @@ public class Tariff {
 
     public void setOpenDate(Date openDate) {
         this.openDate = openDate;
-    }
-
-    public Date getCloseDate() {
-        return closeDate;
-    }
-
-    public void setCloseDate(Date closeDate) {
-        this.closeDate = closeDate == null ? DEFAULT_CLOSE_DATE : closeDate;
     }
 }
