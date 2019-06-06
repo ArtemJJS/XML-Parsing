@@ -32,3 +32,9 @@
 2019-06-04 14:10:33 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
 2019-06-04 14:11:20 main DEBUG Main:19 - Start of Main
 2019-06-04 14:11:21 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-06 21:53:47 main DEBUG Main:19 - Start of Main
+2019-06-06 21:53:48 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-06 22:16:05 main DEBUG Main:19 - Start of Main
+2019-06-06 22:16:05 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.
+2019-06-06 22:18:12 main DEBUG Main:19 - Start of Main
+2019-06-06 22:18:12 main INFO  XMLFileValidator:35 - File src/main/resources/data/tariffs.xml is valid.

@@ -22,7 +22,7 @@
         <attribute name="name" type="string" use="required"/>
         <attribute name="operatorName" type="string" use="required"/>
         <attribute name="openDate" type="date" use="required"/>
-        <attribute name="closeDate" type="date"/>
+        <attribute name="closeDate" type="date" default="2030-01-01"/>
     </complexType>
 
     <complexType name="callPricePlan">
@@ -36,9 +36,9 @@
 
     <complexType name="tariffParameters">
         <sequence>
-            <element name="favoriteNumbersAmount" type="nonNegativeInteger" minOccurs="0"/>
-            <element name="tarification" type="tns:tarificationInterval" minOccurs="0"/>
-            <element name="activationPayment" type="tns:positiveDecimal" minOccurs="0"/>
+            <element name="favoriteNumbersAmount" type="nonNegativeInteger" minOccurs="0" default="0"/>
+            <element name="tarification" type="tns:tarificationInterval" minOccurs="0" default="1"/>
+            <element name="activationPayment" type="tns:positiveDecimal" minOccurs="0" default="0"/>
         </sequence>
     </complexType>
 

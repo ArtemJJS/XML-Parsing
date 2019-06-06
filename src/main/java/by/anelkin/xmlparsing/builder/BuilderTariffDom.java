@@ -18,7 +18,7 @@ import java.util.*;
 
 import static by.anelkin.xmlparsing.entity.Tariff.*;
 import static by.anelkin.xmlparsing.entity.Tariff.CallPriceParameters.*;
-import static by.anelkin.xmlparsing.entity.Tariff.Parameters.*;
+import static by.anelkin.xmlparsing.entity.Tariff.TariffParameters.*;
 
 public class BuilderTariffDom implements BuilderTariff {
     private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
@@ -71,7 +71,7 @@ public class BuilderTariffDom implements BuilderTariff {
             tariff.setCallPrices(fillCallPrices(callPricesElement));
 
             Element parametersElement = getChildByName(element, "parameters");
-            tariff.setParameters(fillParameters(parametersElement));
+            tariff.setTariffParameters(fillParameters(parametersElement));
 
             tariffs.add(tariff);
         }
@@ -106,8 +106,8 @@ public class BuilderTariffDom implements BuilderTariff {
         return callPrices;
     }
 
-    private Map<Parameters, String> fillParameters(Element parametersElement) {
-        Map<Parameters, String> parameters = new HashMap<>();
+    private Map<TariffParameters, String> fillParameters(Element parametersElement) {
+        Map<TariffParameters, String> parameters = new HashMap<>();
 
         Element tarification = getChildByName(parametersElement, "tarification");
         if (tarification != null) {

@@ -23,7 +23,7 @@ public class BuilderTariffStax implements BuilderTariff {
     private BigDecimal payRoll;
     private BigDecimal smsPrice;
     private Map<CallPriceParameters, BigDecimal> callPrices = new HashMap<>();
-    private Map<Parameters, String> parameters = new HashMap<>();
+    private Map<TariffParameters, String> parameters = new HashMap<>();
     private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
 
 
@@ -71,13 +71,13 @@ public class BuilderTariffStax implements BuilderTariff {
                             callPrices.put(CallPriceParameters.INSIDE_NETWORK, new BigDecimal(reader.getElementText()));
                             break;
                         case ACTIVATIONPAYMENT:
-                            parameters.put(Parameters.ACTIVATION_PAYMENT, reader.getElementText());
+                            parameters.put(TariffParameters.ACTIVATION_PAYMENT, reader.getElementText());
                             break;
                         case FAVORITENUMBERSAMOUNT:
-                            parameters.put(Parameters.FAVORITE_NUMBERS_AMOUNT, reader.getElementText());
+                            parameters.put(TariffParameters.FAVORITE_NUMBERS_AMOUNT, reader.getElementText());
                             break;
                         case TARIFICATION:
-                            parameters.put(Parameters.TARIFICATION, reader.getElementText());
+                            parameters.put(TariffParameters.TARIFICATION, reader.getElementText());
                             break;
                         case TARIFF: {
                             for (int i = 0; i < reader.getAttributeCount(); i++) {

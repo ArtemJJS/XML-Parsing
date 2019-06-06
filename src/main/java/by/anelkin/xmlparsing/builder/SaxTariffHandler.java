@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 
 import static by.anelkin.xmlparsing.builder.BuilderTariff.*;
 import static by.anelkin.xmlparsing.entity.Tariff.CallPriceParameters.*;
-import static by.anelkin.xmlparsing.entity.Tariff.Parameters.*;
+import static by.anelkin.xmlparsing.entity.Tariff.TariffParameters.*;
 
 class SaxTariffHandler extends DefaultHandler {
     private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
@@ -24,7 +24,7 @@ class SaxTariffHandler extends DefaultHandler {
     private Tariff tariff = new Tariff();
     private StringBuilder elementValueBuilder = new StringBuilder();
     private Map<Tariff.CallPriceParameters, BigDecimal> callPrices = new HashMap<>();
-    private Map<Tariff.Parameters, String> parameters = new HashMap<>();
+    private Map<Tariff.TariffParameters, String> parameters = new HashMap<>();
 
     public List<Tariff> getTariffs() {
         return tariffs;
@@ -109,7 +109,7 @@ class SaxTariffHandler extends DefaultHandler {
                 parameters.put(ACTIVATION_PAYMENT, elementValue);
                 break;
             case PARAMETERS:
-                tariff.setParameters(parameters);
+                tariff.setTariffParameters(parameters);
                 break;
             case CALLPRICES:
                 tariff.setCallPrices(callPrices);
