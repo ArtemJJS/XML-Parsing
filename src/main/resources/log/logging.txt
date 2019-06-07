@@ -133,3 +133,146 @@
 2019-06-07 15:16:23 main ERROR SchemaErrorHandler:21 - 7 : 31 - cvc-minInclusive-valid: Value '-14' is not facet-valid with respect to minInclusive '0.0' for type 'positiveDecimal'.
 2019-06-07 15:16:23 main ERROR SchemaErrorHandler:21 - 7 : 31 - cvc-type.3.1.3: The value '-14' of element 'payRoll' is not valid.
 2019-06-07 15:16:23 main INFO  XMLTariffValidator:35 - File src/main/resources/data/test_data/test_tariffs.xml is valid.
+2019-06-07 15:41:33 main DEBUG Tariff:66 - Tariff created. id: VL100101
+2019-06-07 15:41:33 main DEBUG Tariff:66 - Tariff created. id: VL100102
+2019-06-07 15:41:33 main INFO  Tariff:31 - Start parsing with DOM-parser.
+2019-06-07 15:41:33 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:41:33 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:41:33 main INFO  Tariff:42 - DOM-parser completed parsing.
+2019-06-07 15:41:33 main INFO  Tariff:31 - Start parsing with DOM-parser.
+2019-06-07 15:41:33 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:41:33 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:41:33 main INFO  Tariff:42 - DOM-parser completed parsing.
+2019-06-07 15:41:33 main DEBUG Tariff:66 - Tariff created. id: VL100101
+2019-06-07 15:41:33 main DEBUG Tariff:66 - Tariff created. id: VL100102
+2019-06-07 15:41:33 main INFO  Tariff:19 - Start parsing with SAX-parser.
+2019-06-07 15:41:33 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:41:33 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:41:33 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:41:33 main INFO  Tariff:31 - Sax-parser completed parsing.
+2019-06-07 15:41:33 main INFO  Tariff:19 - Start parsing with SAX-parser.
+2019-06-07 15:41:33 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:41:33 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:41:33 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:41:33 main INFO  Tariff:31 - Sax-parser completed parsing.
+2019-06-07 15:41:33 main DEBUG Tariff:66 - Tariff created. id: VL100101
+2019-06-07 15:41:33 main DEBUG Tariff:66 - Tariff created. id: VL100102
+2019-06-07 15:41:33 main INFO  Tariff:34 - Start parsing with StAX-parser.
+2019-06-07 15:41:33 main DEBUG Tariff:66 - Tariff created. id: VL100101
+2019-06-07 15:41:33 main DEBUG Tariff:66 - Tariff created. id: VL100102
+2019-06-07 15:41:33 main INFO  Tariff:43 - StAX completed parsing.
+2019-06-07 15:41:33 main INFO  Tariff:34 - Start parsing with StAX-parser.
+2019-06-07 15:41:33 main DEBUG Tariff:66 - Tariff created. id: VL100101
+2019-06-07 15:41:33 main DEBUG Tariff:66 - Tariff created. id: VL100102
+2019-06-07 15:41:33 main INFO  Tariff:43 - StAX completed parsing.
+2019-06-07 15:41:33 main ERROR SchemaErrorHandler:21 - 7 : 31 - cvc-minInclusive-valid: Value '-14' is not facet-valid with respect to minInclusive '0.0' for type 'positiveDecimal'.
+2019-06-07 15:41:33 main ERROR SchemaErrorHandler:21 - 7 : 31 - cvc-type.3.1.3: The value '-14' of element 'payRoll' is not valid.
+2019-06-07 15:41:33 main INFO  XMLTariffValidator:35 - File src/main/resources/data/test_data/test_tariffs.xml is valid.
+2019-06-07 15:41:37 main INFO  Tariff:34 - Start parsing with StAX-parser.
+2019-06-07 15:41:37 main DEBUG Tariff:66 - Tariff created. id: VL100101
+2019-06-07 15:41:37 main DEBUG Tariff:66 - Tariff created. id: VL100102
+2019-06-07 15:41:37 main DEBUG Tariff:66 - Tariff created. id: VL100201
+2019-06-07 15:41:37 main DEBUG Tariff:66 - Tariff created. id: VL100202
+2019-06-07 15:41:37 main DEBUG Tariff:66 - Tariff created. id: VL100203
+2019-06-07 15:41:37 main DEBUG Tariff:66 - Tariff created. id: VL103001
+2019-06-07 15:41:37 main DEBUG Tariff:66 - Tariff created. id: MT100101
+2019-06-07 15:41:37 main DEBUG Tariff:66 - Tariff created. id: MT100102
+2019-06-07 15:41:37 main DEBUG Tariff:66 - Tariff created. id: MT100103
+2019-06-07 15:41:37 main DEBUG Tariff:66 - Tariff created. id: MT100104
+2019-06-07 15:41:37 main DEBUG Tariff:66 - Tariff created. id: MT102001
+2019-06-07 15:41:37 main DEBUG Tariff:66 - Tariff created. id: MT102002
+2019-06-07 15:41:37 main DEBUG Tariff:66 - Tariff created. id: LF101001
+2019-06-07 15:41:37 main DEBUG Tariff:66 - Tariff created. id: LF101002
+2019-06-07 15:41:37 main DEBUG Tariff:66 - Tariff created. id: LF101003
+2019-06-07 15:41:37 main DEBUG Tariff:66 - Tariff created. id: LF102001
+2019-06-07 15:41:37 main INFO  Tariff:43 - StAX completed parsing.
+2019-06-07 15:42:49 main INFO  Tariff:34 - Start parsing with StAX-parser.
+2019-06-07 15:42:49 main DEBUG Tariff:66 - Tariff created. id: VL100101
+2019-06-07 15:42:49 main DEBUG Tariff:66 - Tariff created. id: VL100102
+2019-06-07 15:42:49 main DEBUG Tariff:66 - Tariff created. id: VL100201
+2019-06-07 15:42:49 main DEBUG Tariff:66 - Tariff created. id: VL100202
+2019-06-07 15:42:49 main DEBUG Tariff:66 - Tariff created. id: VL100203
+2019-06-07 15:42:49 main DEBUG Tariff:66 - Tariff created. id: VL103001
+2019-06-07 15:42:49 main DEBUG Tariff:66 - Tariff created. id: MT100101
+2019-06-07 15:42:49 main DEBUG Tariff:66 - Tariff created. id: MT100102
+2019-06-07 15:42:49 main DEBUG Tariff:66 - Tariff created. id: MT100103
+2019-06-07 15:42:49 main DEBUG Tariff:66 - Tariff created. id: MT100104
+2019-06-07 15:42:49 main DEBUG Tariff:66 - Tariff created. id: MT102001
+2019-06-07 15:42:49 main DEBUG Tariff:66 - Tariff created. id: MT102002
+2019-06-07 15:42:49 main DEBUG Tariff:66 - Tariff created. id: LF101001
+2019-06-07 15:42:49 main DEBUG Tariff:66 - Tariff created. id: LF101002
+2019-06-07 15:42:49 main DEBUG Tariff:66 - Tariff created. id: LF101003
+2019-06-07 15:42:49 main DEBUG Tariff:66 - Tariff created. id: LF102001
+2019-06-07 15:42:49 main INFO  Tariff:43 - StAX completed parsing.
+2019-06-07 15:43:00 main INFO  Tariff:31 - Start parsing with DOM-parser.
+2019-06-07 15:43:00 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:00 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:00 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:00 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:00 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:00 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:00 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:00 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:00 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:00 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:00 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:00 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:00 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:00 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:00 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:00 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:00 main INFO  Tariff:42 - DOM-parser completed parsing.
+2019-06-07 15:43:07 main INFO  Tariff:19 - Start parsing with SAX-parser.
+2019-06-07 15:43:07 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:07 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:07 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:07 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:07 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:07 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:07 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:07 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:07 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:07 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:07 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:07 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:07 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:07 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:07 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:07 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:07 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:43:07 main INFO  Tariff:31 - Sax-parser completed parsing.
+2019-06-07 15:44:30 main DEBUG Tariff:66 - Tariff created. id: VL100101
+2019-06-07 15:44:30 main DEBUG Tariff:66 - Tariff created. id: VL100102
+2019-06-07 15:44:30 main INFO  Tariff:31 - Start parsing with DOM-parser.
+2019-06-07 15:44:30 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:44:30 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:44:30 main INFO  Tariff:42 - DOM-parser completed parsing.
+2019-06-07 15:44:30 main INFO  Tariff:31 - Start parsing with DOM-parser.
+2019-06-07 15:44:30 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:44:30 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:44:30 main INFO  Tariff:42 - DOM-parser completed parsing.
+2019-06-07 15:44:30 main DEBUG Tariff:66 - Tariff created. id: VL100101
+2019-06-07 15:44:30 main DEBUG Tariff:66 - Tariff created. id: VL100102
+2019-06-07 15:44:30 main INFO  Tariff:19 - Start parsing with SAX-parser.
+2019-06-07 15:44:30 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:44:30 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:44:30 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:44:30 main INFO  Tariff:31 - Sax-parser completed parsing.
+2019-06-07 15:44:30 main INFO  Tariff:19 - Start parsing with SAX-parser.
+2019-06-07 15:44:30 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:44:30 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:44:30 main DEBUG Tariff:48 - Tariff without parameters created.
+2019-06-07 15:44:30 main INFO  Tariff:31 - Sax-parser completed parsing.
+2019-06-07 15:44:30 main DEBUG Tariff:66 - Tariff created. id: VL100101
+2019-06-07 15:44:30 main DEBUG Tariff:66 - Tariff created. id: VL100102
+2019-06-07 15:44:30 main INFO  Tariff:34 - Start parsing with StAX-parser.
+2019-06-07 15:44:30 main DEBUG Tariff:66 - Tariff created. id: VL100101
+2019-06-07 15:44:30 main DEBUG Tariff:66 - Tariff created. id: VL100102
+2019-06-07 15:44:30 main INFO  Tariff:43 - StAX completed parsing.
+2019-06-07 15:44:30 main INFO  Tariff:34 - Start parsing with StAX-parser.
+2019-06-07 15:44:30 main DEBUG Tariff:66 - Tariff created. id: VL100101
+2019-06-07 15:44:30 main DEBUG Tariff:66 - Tariff created. id: VL100102
+2019-06-07 15:44:30 main INFO  Tariff:43 - StAX completed parsing.
+2019-06-07 15:44:30 main ERROR SchemaErrorHandler:21 - 7 : 31 - cvc-minInclusive-valid: Value '-14' is not facet-valid with respect to minInclusive '0.0' for type 'positiveDecimal'.
+2019-06-07 15:44:30 main ERROR SchemaErrorHandler:21 - 7 : 31 - cvc-type.3.1.3: The value '-14' of element 'payRoll' is not valid.
+2019-06-07 15:44:30 main INFO  XMLTariffValidator:35 - File src/main/resources/data/test_data/test_tariffs.xml is valid.
