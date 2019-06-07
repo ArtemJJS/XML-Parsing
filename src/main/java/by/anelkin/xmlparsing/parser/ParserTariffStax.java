@@ -1,6 +1,7 @@
-package by.anelkin.xmlparsing.builder;
+package by.anelkin.xmlparsing.parser;
 
 import by.anelkin.xmlparsing.entity.Tariff;
+import org.apache.log4j.Logger;
 
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
@@ -14,7 +15,8 @@ import java.util.*;
 
 import static by.anelkin.xmlparsing.entity.Tariff.*;
 
-public class BuilderTariffStax implements BuilderTariff {
+public class ParserTariffStax implements ParserTariff {
+    private static final Logger logger = Logger.getLogger(Tariff.class);
     private String id;
     private String name;
     private String operatorName;
@@ -29,17 +31,16 @@ public class BuilderTariffStax implements BuilderTariff {
 
     @Override
     public List<Tariff> parse(InputStream inputStream) {
-        if (inputStream == null) {
-            throw new RuntimeException("InputStream to parse = null !!!");
-        }
+        logger.info("Start parsing with StAX-parser.");
         List<Tariff> tariffs = new ArrayList<>();
         XMLInputFactory inputFactory = XMLInputFactory.newInstance();
         try {
             XMLStreamReader reader = inputFactory.createXMLStreamReader(inputStream);
             tariffs.addAll(doParsing(reader));
         } catch (XMLStreamException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
+        logger.info("StAX completed parsing.");
         return tariffs;
     }
 
@@ -79,7 +80,7 @@ public class BuilderTariffStax implements BuilderTariff {
                         case TARIFICATION:
                             parameters.put(TariffParameters.TARIFICATION, reader.getElementText());
                             break;
-                        case TARIFF: {
+                        case TARIFF:
                             for (int i = 0; i < reader.getAttributeCount(); i++) {
                                 String attributeName = reader.getAttributeLocalName(i).toUpperCase();
                                 switch (TariffAttribute.valueOf(attributeName)) {
@@ -107,10 +108,20 @@ public class BuilderTariffStax implements BuilderTariff {
                                         }
                                 }
                             }
-                        }
+                            break;
+                            //empty cases to prevent unnecessary default case calling:
+                        case TARIFFS:
+                            break;
+                        case CALLPRICES:
+                            break;
+                        case PARAMETERS:
+                            break;
+                        default:
+                            throw new RuntimeException("Wrong tag name " + tagName);
                     }
                     break;
                 }
+
                 case XMLStreamConstants.END_ELEMENT: {
                     if (reader.getLocalName().equals("tariff")) {
                         tariffs.add(getTariff());

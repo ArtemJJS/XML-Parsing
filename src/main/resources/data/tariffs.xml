@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <tariffs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://anelkin.by/telecom telecom.xsd"
+         xsi:schemaLocation="http://anelkin.by/telecom tariff_schema.xsd"
          xmlns="http://anelkin.by/telecom">
     <tariff id="VL100101" name="Privet Light" operatorName="Velcom" openDate="2015-04-11" closeDate="2017-08-10">
         <payRoll>14</payRoll>

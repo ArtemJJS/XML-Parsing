@@ -1,11 +1,11 @@
-package by.anelkin.xmlparsing.builder;
+package by.anelkin.xmlparsing.parser;
 
 import by.anelkin.xmlparsing.entity.Tariff;
 
 import java.io.InputStream;
 import java.util.List;
 
-public interface BuilderTariff {
+public interface ParserTariff {
     List<Tariff> parse(InputStream inputStream);
 
     enum ParserEnum {

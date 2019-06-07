@@ -1,6 +1,7 @@
-package by.anelkin.xmlparsing.builder;
+package by.anelkin.xmlparsing.parser;
 
 import by.anelkin.xmlparsing.entity.Tariff;
+import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -20,12 +21,14 @@ import static by.anelkin.xmlparsing.entity.Tariff.*;
 import static by.anelkin.xmlparsing.entity.Tariff.CallPriceParameters.*;
 import static by.anelkin.xmlparsing.entity.Tariff.TariffParameters.*;
 
-public class BuilderTariffDom implements BuilderTariff {
+public class ParserTariffDom implements ParserTariff {
+    private static final Logger logger = Logger.getLogger(Tariff.class);
     private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
 
     @Override
 
     public List<Tariff> parse(InputStream inputStream) {
+        logger.info("Start parsing with DOM-parser.");
         List<Tariff> tariffs = new ArrayList<>();
         try {
             DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
@@ -33,13 +36,10 @@ public class BuilderTariffDom implements BuilderTariff {
             Document document = documentBuilder.parse(inputStream);
             Element root = document.getDocumentElement();
             tariffs.addAll(buildTariffs(root));
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        } catch (SAXException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (ParserConfigurationException | SAXException | IOException e) {
+            throw new RuntimeException("e");
         }
+        logger.info("DOM-parser completed parsing.");
         return tariffs;
     }
 
@@ -65,13 +65,12 @@ public class BuilderTariffDom implements BuilderTariff {
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-
-
+            
             Element callPricesElement = getChildByName(element, "callPrices");
-            tariff.setCallPrices(fillCallPrices(callPricesElement));
+            tariff.setCallPrices(fillCallPricesMap(callPricesElement));
 
             Element parametersElement = getChildByName(element, "parameters");
-            tariff.setTariffParameters(fillParameters(parametersElement));
+            tariff.setTariffParameters(fillTariffParametersMap(parametersElement));
 
             tariffs.add(tariff);
         }
@@ -86,7 +85,7 @@ public class BuilderTariffDom implements BuilderTariff {
         return child;
     }
 
-    private Map<CallPriceParameters, BigDecimal> fillCallPrices(Element callPricesElement) {
+    private Map<CallPriceParameters, BigDecimal> fillCallPricesMap(Element callPricesElement) {
         Map<CallPriceParameters, BigDecimal> callPrices = new HashMap<>();
 
         Element insideNetwork = getChildByName(callPricesElement, "insideNetwork");
@@ -106,7 +105,7 @@ public class BuilderTariffDom implements BuilderTariff {
         return callPrices;
     }
 
-    private Map<TariffParameters, String> fillParameters(Element parametersElement) {
+    private Map<TariffParameters, String> fillTariffParametersMap(Element parametersElement) {
         Map<TariffParameters, String> parameters = new HashMap<>();
 
         Element tarification = getChildByName(parametersElement, "tarification");

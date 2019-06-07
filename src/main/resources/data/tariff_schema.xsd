@@ -6,7 +6,7 @@
     <element name="tariffs">
         <complexType>
             <sequence>
-                <element name="tariff" minOccurs="16" maxOccurs="unbounded" type="tns:tariff"/>
+                <element name="tariff" maxOccurs="unbounded" type="tns:tariff"/>
             </sequence>
         </complexType>
     </element>

@@ -8,8 +8,8 @@ import org.xml.sax.SAXException;
 import java.io.File;
 import java.io.IOException;
 
-public class XMLFileValidator {
-    private static final Logger logger = Logger.getLogger(XMLFileValidator.class);
+public class XMLTariffValidator {
+    private static final Logger logger = Logger.getLogger(XMLTariffValidator.class);
     private static final String DEFAULT_PATH = "src/main/resources/data/tariffs.xml";
 
     public boolean validate(String path) {

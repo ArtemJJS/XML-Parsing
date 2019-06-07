@@ -1,10 +1,10 @@
 package by.anelkin.xmlparsing;
 
-import by.anelkin.xmlparsing.builder.BuilderTariffSax;
+import by.anelkin.xmlparsing.parser.ParserTariffSax;
 import by.anelkin.xmlparsing.entity.Tariff;
-import by.anelkin.xmlparsing.builder.BuilderTariffDom;
-import by.anelkin.xmlparsing.builder.BuilderTariffStax;
-import by.anelkin.xmlparsing.validator.XMLFileValidator;
+import by.anelkin.xmlparsing.parser.ParserTariffDom;
+import by.anelkin.xmlparsing.parser.ParserTariffStax;
+import by.anelkin.xmlparsing.validator.XMLTariffValidator;
 import org.apache.log4j.Logger;
 
 import java.io.FileInputStream;
@@ -18,15 +18,15 @@ public class Main {
         Logger logger = Logger.getLogger(Main.class);
         logger.debug("Start of Main");
 
-        XMLFileValidator validator = new XMLFileValidator();
+        XMLTariffValidator validator = new XMLTariffValidator();
         System.out.println(validator.validate("src/main/resources/data/tariffs.xml"));
 
         System.out.println("Проверка завершена.");
 
-        BuilderTariffStax builderTariffVelcom = new BuilderTariffStax();
+        ParserTariffStax builderTariffVelcom = new ParserTariffStax();
         List<Tariff> listStax = new ArrayList<>();
         try {
-            listStax = builderTariffVelcom.parse(new FileInputStream("src/main/resources/data/tariffs.xml"));
+           listStax = builderTariffVelcom.parse(new FileInputStream("src/main/resources/data/tariffs.xml"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -35,7 +35,7 @@ public class Main {
 
         System.out.println("====================");
 
-        BuilderTariffDom builderTariffDom = new BuilderTariffDom();
+        ParserTariffDom builderTariffDom = new ParserTariffDom();
         List<Tariff> listDom = new ArrayList<>();
         try {
             listDom = builderTariffDom.parse(new FileInputStream("src/main/resources/data/tariffs.xml"));
@@ -48,7 +48,7 @@ public class Main {
 
         System.out.println("====================");
 
-        BuilderTariffSax builderTariffSax = new BuilderTariffSax();
+        ParserTariffSax builderTariffSax = new ParserTariffSax();
         List<Tariff> listSax = new ArrayList<>();
         try {
             listSax = builderTariffSax.parse(new FileInputStream("src/main/resources/data/tariffs.xml"));
@@ -76,6 +76,11 @@ public class Main {
 
         System.out.println(listSax.get(0).equals(listDom.get(0))
                 && listSax.get(0).equals(listStax.get(0)));
+
+
+        System.out.println(listDom.get(1).getCloseDate().getTime());
+        System.out.println(listDom.get(1).getCloseDate());
+
     }
 }
 

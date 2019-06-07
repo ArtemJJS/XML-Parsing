@@ -1,8 +1,7 @@
-package by.anelkin.xmlparsing.builder;
+package by.anelkin.xmlparsing.parser;
 
 import by.anelkin.xmlparsing.entity.Tariff;
 import org.xml.sax.Attributes;
-import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 import java.math.BigDecimal;
@@ -12,9 +11,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
-import static by.anelkin.xmlparsing.builder.BuilderTariff.*;
+import static by.anelkin.xmlparsing.parser.ParserTariff.*;
 import static by.anelkin.xmlparsing.entity.Tariff.CallPriceParameters.*;
 import static by.anelkin.xmlparsing.entity.Tariff.TariffParameters.*;
 
@@ -37,6 +35,7 @@ class SaxTariffHandler extends DefaultHandler {
 
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) {
+       // read attributes values for tag "tariff":
         if (qName.equals("tariff")) {
             for (int i = 0; i < attributes.getLength(); i++) {
                 String attributeValue = attributes.getValue(i);
@@ -119,11 +118,12 @@ class SaxTariffHandler extends DefaultHandler {
             default:
                 throw new RuntimeException("Wrong tag-name: " + qName);
         }
+
         elementValueBuilder = new StringBuilder();
     }
 
     // accumulating value in stringBuilder,
-    // because some elements call method characters twice or more times:
+    // because some elements are calling method characters(ch,start,length) twice or more times:
     @Override
     public void characters(char[] ch, int start, int length) {
         elementValueBuilder.append(new String(ch, start, length));

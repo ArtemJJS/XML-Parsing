@@ -2,13 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54125157-47e0-4f6a-b626-0cf3364877a9" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/test_data/test_tariffs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/test_data/test_tariffs_incorrect.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/by/anelkin/xmlparsing/dataprovider/TestDataProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/by/anelkin/xmlparsing/parser/ParserTariffDomTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/by/anelkin/xmlparsing/parser/ParserTariffSaxTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/by/anelkin/xmlparsing/parser/ParserTariffStaxTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/builder/BuilderTariffDom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/builder/BuilderTariffDom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/builder/BuilderTariffStax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/builder/BuilderTariffStax.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/builder/SaxTariffHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/builder/SaxTariffHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/builder/BuilderTariff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/parser/ParserTariff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/builder/BuilderTariffDom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/parser/ParserTariffDom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/builder/BuilderTariffSax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/parser/ParserTariffSax.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/builder/BuilderTariffStax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/parser/ParserTariffStax.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/builder/SaxTariffHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/parser/SaxTariffHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/entity/Tariff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/entity/Tariff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/telecom.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/telecom.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/validator/XMLFileValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/validator/XMLTariffValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/tariffs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/tariffs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data/telecom.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/tariff_schema.xsd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/log/logging.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log/logging.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log/logging.txt.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log/logging.txt.2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log/logging.txt.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/anelkin/xmlparsing/validator/XMLFileValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/anelkin/xmlparsing/validator/XMLTariffValidatorTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,17 +36,27 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/XMLParsing$ParserTariffDomTest.ic" NAME="ParserTariffDomTest Coverage Results" MODIFIED="1559909227556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>by.anelkin.xmlparsing.parser.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/XMLParsing$_default_.ic" NAME="&lt;default&gt; Coverage Results" MODIFIED="1559909207058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/XMLParsing$Main.ic" NAME="Main Coverage Results" MODIFIED="1559637317720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>by.anelkin.xmlparsing.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/XMLParsing$XMLTariffValidatorTest.ic" NAME="XMLTariffValidatorTest Coverage Results" MODIFIED="1559909240676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>by.anelkin.xmlparsing.validator.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/XMLParsing$ParserTariffStaxTest.ic" NAME="ParserTariffStaxTest Coverage Results" MODIFIED="1559909279100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>by.anelkin.xmlparsing.parser.*</FILTER>
     </SUITE>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1654">
-              <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+            <state relative-caret-position="-1197">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -38,10 +64,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BuilderTariff.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/builder/BuilderTariff.java">
+      <file leaf-file-name="ParserTariff.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/parser/ParserTariff.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
+            <state relative-caret-position="220">
               <caret line="10" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -50,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BuilderTariffSax.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/builder/BuilderTariffSax.java">
+      <file leaf-file-name="ParserTariffSax.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/parser/ParserTariffSax.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="286">
+              <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -62,36 +88,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SaxTariffHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/builder/SaxTariffHandler.java">
+      <file leaf-file-name="tariff_schema.xsd" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/data/tariff_schema.xsd">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1843">
-              <caret line="115" column="22" lean-forward="true" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1108#1109#0" expanded="true" />
-                <element signature="e#1138#1139#0" expanded="true" />
-                <element signature="e#1187#1188#0" expanded="true" />
-                <element signature="e#1230#1231#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="453">
+              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="telecom.xsd" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/data/telecom.xsd">
+      <file leaf-file-name="TestDataProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/by/anelkin/xmlparsing/dataprovider/TestDataProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-261">
-              <caret line="18" column="68" lean-forward="true" selection-start-line="18" selection-start-column="68" selection-end-line="18" selection-end-column="68" />
+            <state relative-caret-position="154">
+              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BuilderTariffDom.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/builder/BuilderTariffDom.java">
+      <file leaf-file-name="ParserTariffDomTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/by/anelkin/xmlparsing/parser/ParserTariffDomTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            <state relative-caret-position="123">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -99,11 +118,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BuilderTariffStax.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/builder/BuilderTariffStax.java">
+      <file leaf-file-name="ParserTariffSaxTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/by/anelkin/xmlparsing/parser/ParserTariffSaxTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2218">
-              <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+            <state relative-caret-position="220">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -111,11 +130,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tariffs.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/data/tariffs.xml">
+      <file leaf-file-name="ParserTariffStaxTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/by/anelkin/xmlparsing/parser/ParserTariffStaxTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="220">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParserTariffDom.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/parser/ParserTariffDom.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,48 +157,45 @@
       <file leaf-file-name="Tariff.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/entity/Tariff.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="164" column="16" selection-start-line="164" selection-start-column="16" selection-end-line="164" selection-end-column="16" />
+            <state relative-caret-position="2574">
+              <caret line="117" column="3" selection-start-line="117" selection-start-column="3" selection-end-line="117" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3828#3829#0" expanded="true" />
-                <element signature="e#3870#3871#0" expanded="true" />
-                <element signature="e#3904#3905#0" expanded="true" />
-                <element signature="e#3936#3937#0" expanded="true" />
-                <element signature="e#3965#3966#0" expanded="true" />
-                <element signature="e#3990#3991#0" expanded="true" />
-                <element signature="e#4026#4027#0" expanded="true" />
-                <element signature="e#4054#4055#0" expanded="true" />
-                <element signature="e#4085#4086#0" expanded="true" />
-                <element signature="e#4112#4113#0" expanded="true" />
-                <element signature="e#4152#4153#0" expanded="true" />
-                <element signature="e#4184#4185#0" expanded="true" />
-                <element signature="e#4223#4224#0" expanded="true" />
-                <element signature="e#4258#4259#0" expanded="true" />
-                <element signature="e#4314#4315#0" expanded="true" />
-                <element signature="e#4362#4363#0" expanded="true" />
-                <element signature="e#4400#4401#0" expanded="true" />
-                <element signature="e#4430#4431#0" expanded="true" />
-                <element signature="e#4480#4481#0" expanded="true" />
-                <element signature="e#4518#4519#0" expanded="true" />
-                <element signature="e#4591#4592#0" expanded="true" />
-                <element signature="e#4624#4625#0" expanded="true" />
-                <element signature="e#4712#4713#0" expanded="true" />
+                <element signature="e#1580#1581#0" expanded="true" />
+                <element signature="e#1646#1647#0" expanded="true" />
+                <element signature="e#4717#4718#0" expanded="true" />
                 <element signature="e#4756#4757#0" expanded="true" />
-                <element signature="e#4795#4796#0" expanded="true" />
-                <element signature="e#4826#4827#0" expanded="true" />
-                <element signature="e#4878#4879#0" expanded="true" />
-                <element signature="e#4918#4919#0" expanded="true" />
-                <element signature="e#4990#4991#0" expanded="true" />
-                <element signature="e#5035#5036#0" expanded="true" />
+                <element signature="e#5051#5052#0" expanded="true" />
+                <element signature="e#5093#5094#0" expanded="true" />
+                <element signature="e#4775#4776#0" expanded="true" />
+                <element signature="e#4807#4808#0" expanded="true" />
+                <element signature="e#4836#4837#0" expanded="true" />
+                <element signature="e#4861#4862#0" expanded="true" />
+                <element signature="e#4897#4898#0" expanded="true" />
+                <element signature="e#4925#4926#0" expanded="true" />
+                <element signature="e#4956#4957#0" expanded="true" />
+                <element signature="e#4983#4984#0" expanded="true" />
+                <element signature="e#5023#5024#0" expanded="true" />
+                <element signature="e#5055#5056#0" expanded="true" />
+                <element signature="e#5094#5095#0" expanded="true" />
+                <element signature="e#5129#5130#0" expanded="true" />
+                <element signature="e#5185#5186#0" expanded="true" />
+                <element signature="e#5233#5234#0" expanded="true" />
+                <element signature="e#5271#5272#0" expanded="true" />
+                <element signature="e#5301#5302#0" expanded="true" />
+                <element signature="e#5351#5352#0" expanded="true" />
+                <element signature="e#5389#5390#0" expanded="true" />
+                <element signature="e#5456#5457#0" expanded="true" />
+                <element signature="e#5489#5490#0" expanded="true" />
+                <element signature="e#5571#5572#0" expanded="true" />
+                <element signature="e#5615#5616#0" expanded="true" />
+                <element signature="e#5654#5655#0" expanded="true" />
+                <element signature="e#5685#5686#0" expanded="true" />
+                <element signature="e#5737#5738#0" expanded="true" />
+                <element signature="e#5777#5778#0" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logging.txt.2" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/log/logging.txt.2">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -174,9 +205,9 @@
       <list>
         <option value="FxmlFile" />
         <option value="XSLT Stylesheet" />
-        <option value="TestNG Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="TestNG Test Class" />
       </list>
     </option>
   </component>
@@ -185,10 +216,14 @@
       <find>System.out</find>
       <find>elementValue</find>
       <find>parameters</find>
+      <find>fillParameters</find>
+      <find>fillCallPrices</find>
     </findStrings>
     <replaceStrings>
       <replace>elementValueBuilder</replace>
       <replace>tariffParameters</replace>
+      <replace>fillTariffParametersMap</replace>
+      <replace>fillCallPricesMap</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -209,13 +244,9 @@
         <option value="$PROJECT_DIR$/src/main/resources/telecom" />
         <option value="$PROJECT_DIR$/src/main/resources/telecom.xsd" />
         <option value="$PROJECT_DIR$/src/main/resources/tariffs.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/log/logging.txt" />
         <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/validator/XMLErrorHandler.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/validator/XMLFileValidator.java" />
-        <option value="$PROJECT_DIR$/src/test/java/by/anelkin/xmlparsing/validator/XMLFileValidatorTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/parser/ParserTariff.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/parser/TariffBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/parser/ParserEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/instance/TariffVelcom.java" />
@@ -223,18 +254,36 @@
         <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/parser/BuilderTariffStAX.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/instance/Tariff.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/parser/BuilderTariff.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/data/tariffs.xml" />
         <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/parser/BuilderTariffStax.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/parser/BuilderTariffDom.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/builder/BuilderTariff.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/validator/SchemaErrorHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/builder/BuilderTariffSax.java" />
         <option value="$PROJECT_DIR$/src/main/resources/data/telecom.xsd" />
-        <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/builder/SaxTariffHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/entity/Tariff.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/builder/BuilderTariffStax.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/builder/BuilderTariffDom.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/builder/SaxTariffHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/parser/BuilderTariffDom.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/parser/ParserTariff.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/parser/ParserTariffDom.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/parser/SaxTariffHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/parser/ParserTariffSax.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/parser/ParserTariffStax.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/data/tariff_schema.xsd" />
+        <option value="$PROJECT_DIR$/src/main/resources/data/tariffs.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/data/test_tariffs.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/data/test_data/test_tariffs.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/data/test_data/test_tariffs_uncorrect.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/validator/XMLTariffValidator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/by/anelkin/xmlparsing/validator/XMLFileValidatorTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/by/anelkin/xmlparsing/validator/XMLTariffValidatorTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/entity/Tariff.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/Main.java" />
+        <option value="$PROJECT_DIR$/src/test/java/by/anelkin/xmlparsing/dataprovider/TestDataProvider.java" />
+        <option value="$PROJECT_DIR$/src/test/java/by/anelkin/xmlparsing/parser/ParserTariffDomTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/by/anelkin/xmlparsing/parser/ParserTariffSaxTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/by/anelkin/xmlparsing/parser/ParserTariffStaxTest.java" />
       </list>
     </option>
   </component>
@@ -255,13 +304,14 @@
     <option name="width" value="1066" />
     <option name="height" value="1656" />
   </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -302,7 +352,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="xmlparsing" type="462c0819:PsiDirectoryNode" />
-              <item name="builder" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="XMLParsing" type="b2602c69:ProjectViewProjectNode" />
@@ -311,7 +361,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="xmlparsing" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="XMLParsing" type="b2602c69:ProjectViewProjectNode" />
@@ -338,79 +388,54 @@
             </path>
             <path>
               <item name="XMLParsing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="XML-Parsing" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMLParsing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XML-Parsing" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMLParsing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XML-Parsing" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="xmlparsing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMLParsing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XML-Parsing" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="xmlparsing" type="462c0819:PsiDirectoryNode" />
+              <item name="dataprovider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XMLParsing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XML-Parsing" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="xmlparsing" type="462c0819:PsiDirectoryNode" />
+              <item name="parser" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="XMLParsing" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: xerces:xercesImpl:2.12.0" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="XMLParsing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: xerces:xercesImpl:2.12.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="xercesImpl-2.12.0.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="XMLParsing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: xerces:xercesImpl:2.12.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="xercesImpl-2.12.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="XMLParsing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: xerces:xercesImpl:2.12.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="xercesImpl-2.12.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="apache" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="XMLParsing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: xerces:xercesImpl:2.12.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="xercesImpl-2.12.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="apache" type="462c0819:PsiDirectoryNode" />
-              <item name="xerces" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="XMLParsing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: xerces:xercesImpl:2.12.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="xercesImpl-2.12.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="apache" type="462c0819:PsiDirectoryNode" />
-              <item name="xerces" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="XMLParsing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: xerces:xercesImpl:2.12.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="xercesImpl-2.12.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="apache" type="462c0819:PsiDirectoryNode" />
-              <item name="xerces" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-              <item name="dtd" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="XMLParsing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: xerces:xercesImpl:2.12.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="xercesImpl-2.12.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="apache" type="462c0819:PsiDirectoryNode" />
-              <item name="xerces" type="462c0819:PsiDirectoryNode" />
-              <item name="parsers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -423,12 +448,17 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="by.anelkin.xmlparsing.parser" />
       <recent name="by.anelkin.xmlparsing.validator" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\GIT Projects\XML-Parsing\src\main\resources\data\test_data" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\GIT Projects\XML-Parsing\src\main\resources\data\test_data" />
       <recent name="C:\Users\User\Desktop\GIT Projects\XML-Parsing\src\main\resources\data" />
       <recent name="C:\Users\User\Desktop\GIT Projects\XML-Parsing\src\main\resources" />
     </key>
@@ -445,7 +475,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.&lt;default&gt;">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="by.anelkin.xmlparsing.Main" />
       <module name="XML-Parsing" />
@@ -476,6 +506,116 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="ParserTariffDomTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="XML-Parsing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.anelkin.xmlparsing.parser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="by.anelkin.xmlparsing.parser" />
+      <option name="MAIN_CLASS_NAME" value="by.anelkin.xmlparsing.parser.ParserTariffDomTest" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="ParserTariffStaxTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="XML-Parsing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.anelkin.xmlparsing.parser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="by.anelkin.xmlparsing.parser" />
+      <option name="MAIN_CLASS_NAME" value="by.anelkin.xmlparsing.parser.ParserTariffStaxTest" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="XMLTariffValidatorTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="XML-Parsing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.anelkin.xmlparsing.validator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="by.anelkin.xmlparsing.validator" />
+      <option name="MAIN_CLASS_NAME" value="by.anelkin.xmlparsing.validator.XMLTariffValidatorTest" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="&lt;default&gt;" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="XML-Parsing" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -498,8 +638,19 @@
       <properties />
       <listeners />
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="TestNG.ParserTariffStaxTest" />
+      <item itemvalue="TestNG.&lt;default&gt;" />
+      <item itemvalue="TestNG.ParserTariffDomTest" />
+      <item itemvalue="TestNG.XMLTariffValidatorTest" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.&lt;default&gt;" />
+        <item itemvalue="TestNG.ParserTariffStaxTest" />
+        <item itemvalue="TestNG.XMLTariffValidatorTest" />
+        <item itemvalue="TestNG.ParserTariffDomTest" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -564,11 +715,51 @@
       <option name="project" value="LOCAL" />
       <updated>1559646814631</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="refactor: add default tariffParameters values.">
+      <created>1559848756063</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1559848756063</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="_default_ - 2019.06.07 at 15h 03m 06s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_default_ - 2019.06.07 at 15h 03m 14s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_default_ - 2019.06.07 at 15h 06m 36s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_default_ - 2019.06.07 at 15h 06m 49s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ParserTariffDomTest - 2019.06.07 at 15h 07m 09s.xml">
+      <configuration name="ParserTariffDomTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="XMLTariffValidatorTest - 2019.06.07 at 15h 07m 22s.xml">
+      <configuration name="XMLTariffValidatorTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ParserTariffStaxTest - 2019.06.07 at 15h 07m 32s.xml">
+      <configuration name="ParserTariffStaxTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ParserTariffStaxTest - 2019.06.07 at 15h 08m 00s.xml">
+      <configuration name="ParserTariffStaxTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ParserTariffStaxTest - 2019.06.07 at 15h 08m 12s.xml">
+      <configuration name="ParserTariffStaxTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_default_ - 2019.06.07 at 15h 08m 52s.xml">
+      <configuration name="&lt;default&gt;" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -579,11 +770,13 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.3294621" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295838" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27334082" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.38695163" />
+      <window_info anchor="right" id="Coverage" order="4" side_tool="true" weight="0.3294621" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.2992126" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22188264" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15220049" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295838" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -591,12 +784,10 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3824522" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="4" side_tool="true" weight="0.3294621" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3295838" />
     </layout>
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -620,7 +811,8 @@
     <MESSAGE value="fix: bug with empty tariff-parameters map." />
     <MESSAGE value="feat: add DOM-parser." />
     <MESSAGE value="feat: add StAX-parser." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add StAX-parser." />
+    <MESSAGE value="refactor: add default tariffParameters values." />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: add default tariffParameters values." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -637,124 +829,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log/logging.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data/tariffs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="103" selection-start-line="6" selection-start-column="103" selection-end-line="6" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/entity/Tariff.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" selection-start-line="22" selection-end-line="27" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/entity/Tariff.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3828#3829#0" expanded="true" />
-            <element signature="e#3870#3871#0" expanded="true" />
-            <element signature="e#3904#3905#0" expanded="true" />
-            <element signature="e#3936#3937#0" expanded="true" />
-            <element signature="e#3965#3966#0" expanded="true" />
-            <element signature="e#3990#3991#0" expanded="true" />
-            <element signature="e#4026#4027#0" expanded="true" />
-            <element signature="e#4054#4055#0" expanded="true" />
-            <element signature="e#4085#4086#0" expanded="true" />
-            <element signature="e#4112#4113#0" expanded="true" />
-            <element signature="e#4152#4153#0" expanded="true" />
-            <element signature="e#4184#4185#0" expanded="true" />
-            <element signature="e#4223#4224#0" expanded="true" />
-            <element signature="e#4258#4259#0" expanded="true" />
-            <element signature="e#4314#4315#0" expanded="true" />
-            <element signature="e#4362#4363#0" expanded="true" />
-            <element signature="e#4400#4401#0" expanded="true" />
-            <element signature="e#4430#4431#0" expanded="true" />
-            <element signature="e#4480#4481#0" expanded="true" />
-            <element signature="e#4518#4519#0" expanded="true" />
-            <element signature="e#4591#4592#0" expanded="true" />
-            <element signature="e#4624#4625#0" expanded="true" />
-            <element signature="e#4712#4713#0" expanded="true" />
-            <element signature="e#4756#4757#0" expanded="true" />
-            <element signature="e#4795#4796#0" expanded="true" />
-            <element signature="e#4826#4827#0" expanded="true" />
-            <element signature="e#4878#4879#0" expanded="true" />
-            <element signature="e#4918#4919#0" expanded="true" />
-            <element signature="e#4990#4991#0" expanded="true" />
-            <element signature="e#5035#5036#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data/telecom.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data/tariffs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="41" lean-forward="true" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/entity/Tariff.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3828#3829#0" expanded="true" />
-            <element signature="e#3870#3871#0" expanded="true" />
-            <element signature="e#3904#3905#0" expanded="true" />
-            <element signature="e#3936#3937#0" expanded="true" />
-            <element signature="e#3965#3966#0" expanded="true" />
-            <element signature="e#3990#3991#0" expanded="true" />
-            <element signature="e#4026#4027#0" expanded="true" />
-            <element signature="e#4054#4055#0" expanded="true" />
-            <element signature="e#4085#4086#0" expanded="true" />
-            <element signature="e#4112#4113#0" expanded="true" />
-            <element signature="e#4152#4153#0" expanded="true" />
-            <element signature="e#4184#4185#0" expanded="true" />
-            <element signature="e#4223#4224#0" expanded="true" />
-            <element signature="e#4258#4259#0" expanded="true" />
-            <element signature="e#4314#4315#0" expanded="true" />
-            <element signature="e#4362#4363#0" expanded="true" />
-            <element signature="e#4400#4401#0" expanded="true" />
-            <element signature="e#4430#4431#0" expanded="true" />
-            <element signature="e#4480#4481#0" expanded="true" />
-            <element signature="e#4518#4519#0" expanded="true" />
-            <element signature="e#4591#4592#0" expanded="true" />
-            <element signature="e#4624#4625#0" expanded="true" />
-            <element signature="e#4712#4713#0" expanded="true" />
-            <element signature="e#4756#4757#0" expanded="true" />
-            <element signature="e#4795#4796#0" expanded="true" />
-            <element signature="e#4826#4827#0" expanded="true" />
-            <element signature="e#4878#4879#0" expanded="true" />
-            <element signature="e#4918#4919#0" expanded="true" />
-            <element signature="e#4990#4991#0" expanded="true" />
-            <element signature="e#5035#5036#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/XML-Parsing.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -785,7 +859,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data/telecom.xsd">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/data/tariff_schema.xsd">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
@@ -805,36 +879,8 @@
           <caret line="28" selection-start-line="28" selection-end-line="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3828#3829#0" expanded="true" />
-            <element signature="e#3870#3871#0" expanded="true" />
-            <element signature="e#3904#3905#0" expanded="true" />
-            <element signature="e#3936#3937#0" expanded="true" />
-            <element signature="e#3965#3966#0" expanded="true" />
-            <element signature="e#3990#3991#0" expanded="true" />
-            <element signature="e#4026#4027#0" expanded="true" />
-            <element signature="e#4054#4055#0" expanded="true" />
-            <element signature="e#4085#4086#0" expanded="true" />
-            <element signature="e#4112#4113#0" expanded="true" />
-            <element signature="e#4152#4153#0" expanded="true" />
-            <element signature="e#4184#4185#0" expanded="true" />
-            <element signature="e#4223#4224#0" expanded="true" />
-            <element signature="e#4258#4259#0" expanded="true" />
-            <element signature="e#4314#4315#0" expanded="true" />
-            <element signature="e#4362#4363#0" expanded="true" />
-            <element signature="e#4400#4401#0" expanded="true" />
-            <element signature="e#4430#4431#0" expanded="true" />
-            <element signature="e#4480#4481#0" expanded="true" />
-            <element signature="e#4518#4519#0" expanded="true" />
-            <element signature="e#4591#4592#0" expanded="true" />
-            <element signature="e#4624#4625#0" expanded="true" />
-            <element signature="e#4712#4713#0" expanded="true" />
-            <element signature="e#4756#4757#0" expanded="true" />
-            <element signature="e#4795#4796#0" expanded="true" />
-            <element signature="e#4826#4827#0" expanded="true" />
-            <element signature="e#4878#4879#0" expanded="true" />
-            <element signature="e#4918#4919#0" expanded="true" />
-            <element signature="e#4990#4991#0" expanded="true" />
-            <element signature="e#5035#5036#0" expanded="true" />
+            <element signature="e#1580#1581#0" expanded="true" />
+            <element signature="e#1646#1647#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -856,7 +902,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data/telecom.xsd">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/data/tariff_schema.xsd">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
@@ -879,46 +925,11 @@
     <entry file="file://$PROJECT_DIR$/XML-Parsing.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/by/anelkin/xmlparsing/validator/XMLFileValidatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/parser/ParserEnum.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="70" selection-start-line="13" selection-start-column="70" selection-end-line="13" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/entity/Tariff.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="37" column="10" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/validator/SchemaErrorHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/validator/XMLFileValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-84">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -971,8 +982,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log/logging.txt">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/validator/SchemaErrorHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/validator/XMLTariffValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3.jar!/org/testng/annotations/DataProvider.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/by/anelkin/xmlparsing/validator/XMLTariffValidatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="95" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="95" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="58" lean-forward="true" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/data/tariffs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/data/test_data/test_tariffs_incorrect.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/data/test_data/test_tariffs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/log/logging.txt.1">
       <provider selected="true" editor-type-id="text-editor" />
@@ -980,24 +1054,58 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/log/logging.txt.2">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data/telecom.xsd">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log/logging.txt.3">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log/logging.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-261">
-          <caret line="18" column="68" lean-forward="true" selection-start-line="18" selection-start-column="68" selection-end-line="18" selection-end-column="68" />
+        <state relative-caret-position="-1826" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/parser/SaxTariffHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="37" column="50" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data/tariffs.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/parser/ParserTariffStax.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="374">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/builder/BuilderTariffSax.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/parser/ParserTariffSax.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="286">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/parser/ParserTariffDom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/parser/ParserTariff.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1006,81 +1114,73 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/entity/Tariff.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="164" column="16" selection-start-line="164" selection-start-column="16" selection-end-line="164" selection-end-column="16" />
+        <state relative-caret-position="2574">
+          <caret line="117" column="3" selection-start-line="117" selection-start-column="3" selection-end-line="117" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3828#3829#0" expanded="true" />
-            <element signature="e#3870#3871#0" expanded="true" />
-            <element signature="e#3904#3905#0" expanded="true" />
-            <element signature="e#3936#3937#0" expanded="true" />
-            <element signature="e#3965#3966#0" expanded="true" />
-            <element signature="e#3990#3991#0" expanded="true" />
-            <element signature="e#4026#4027#0" expanded="true" />
-            <element signature="e#4054#4055#0" expanded="true" />
-            <element signature="e#4085#4086#0" expanded="true" />
-            <element signature="e#4112#4113#0" expanded="true" />
-            <element signature="e#4152#4153#0" expanded="true" />
-            <element signature="e#4184#4185#0" expanded="true" />
-            <element signature="e#4223#4224#0" expanded="true" />
-            <element signature="e#4258#4259#0" expanded="true" />
-            <element signature="e#4314#4315#0" expanded="true" />
-            <element signature="e#4362#4363#0" expanded="true" />
-            <element signature="e#4400#4401#0" expanded="true" />
-            <element signature="e#4430#4431#0" expanded="true" />
-            <element signature="e#4480#4481#0" expanded="true" />
-            <element signature="e#4518#4519#0" expanded="true" />
-            <element signature="e#4591#4592#0" expanded="true" />
-            <element signature="e#4624#4625#0" expanded="true" />
-            <element signature="e#4712#4713#0" expanded="true" />
+            <element signature="e#1580#1581#0" expanded="true" />
+            <element signature="e#1646#1647#0" expanded="true" />
+            <element signature="e#4717#4718#0" expanded="true" />
             <element signature="e#4756#4757#0" expanded="true" />
-            <element signature="e#4795#4796#0" expanded="true" />
-            <element signature="e#4826#4827#0" expanded="true" />
-            <element signature="e#4878#4879#0" expanded="true" />
-            <element signature="e#4918#4919#0" expanded="true" />
-            <element signature="e#4990#4991#0" expanded="true" />
-            <element signature="e#5035#5036#0" expanded="true" />
+            <element signature="e#5051#5052#0" expanded="true" />
+            <element signature="e#5093#5094#0" expanded="true" />
+            <element signature="e#4775#4776#0" expanded="true" />
+            <element signature="e#4807#4808#0" expanded="true" />
+            <element signature="e#4836#4837#0" expanded="true" />
+            <element signature="e#4861#4862#0" expanded="true" />
+            <element signature="e#4897#4898#0" expanded="true" />
+            <element signature="e#4925#4926#0" expanded="true" />
+            <element signature="e#4956#4957#0" expanded="true" />
+            <element signature="e#4983#4984#0" expanded="true" />
+            <element signature="e#5023#5024#0" expanded="true" />
+            <element signature="e#5055#5056#0" expanded="true" />
+            <element signature="e#5094#5095#0" expanded="true" />
+            <element signature="e#5129#5130#0" expanded="true" />
+            <element signature="e#5185#5186#0" expanded="true" />
+            <element signature="e#5233#5234#0" expanded="true" />
+            <element signature="e#5271#5272#0" expanded="true" />
+            <element signature="e#5301#5302#0" expanded="true" />
+            <element signature="e#5351#5352#0" expanded="true" />
+            <element signature="e#5389#5390#0" expanded="true" />
+            <element signature="e#5456#5457#0" expanded="true" />
+            <element signature="e#5489#5490#0" expanded="true" />
+            <element signature="e#5571#5572#0" expanded="true" />
+            <element signature="e#5615#5616#0" expanded="true" />
+            <element signature="e#5654#5655#0" expanded="true" />
+            <element signature="e#5685#5686#0" expanded="true" />
+            <element signature="e#5737#5738#0" expanded="true" />
+            <element signature="e#5777#5778#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/builder/SaxTariffHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1843">
-          <caret line="115" column="22" lean-forward="true" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
+        <state relative-caret-position="-1197">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1108#1109#0" expanded="true" />
-            <element signature="e#1138#1139#0" expanded="true" />
-            <element signature="e#1187#1188#0" expanded="true" />
-            <element signature="e#1230#1231#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/builder/BuilderTariffStax.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/data/tariff_schema.xsd">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2218">
-          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="453">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/builder/BuilderTariffDom.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/by/anelkin/xmlparsing/dataprovider/TestDataProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="154">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/builder/BuilderTariff.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/by/anelkin/xmlparsing/parser/ParserTariffDomTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
+        <state relative-caret-position="123">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1088,10 +1188,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/anelkin/xmlparsing/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/by/anelkin/xmlparsing/parser/ParserTariffSaxTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1654">
-          <caret line="78" column="5" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+        <state relative-caret-position="220">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/by/anelkin/xmlparsing/parser/ParserTariffStaxTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

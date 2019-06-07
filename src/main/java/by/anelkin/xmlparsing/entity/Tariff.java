@@ -1,5 +1,7 @@
 package by.anelkin.xmlparsing.entity;
 
+import org.apache.log4j.Logger;
+
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -11,6 +13,7 @@ import static by.anelkin.xmlparsing.entity.Tariff.TariffParameters.FAVORITE_NUMB
 import static by.anelkin.xmlparsing.entity.Tariff.TariffParameters.TARIFICATION;
 
 public class Tariff {
+    private static final Logger logger = Logger.getLogger(Tariff.class);
     private String id;
     private String name;
     private String operatorName;
@@ -19,14 +22,14 @@ public class Tariff {
     private Map<CallPriceParameters, BigDecimal> callPrices;
     private Map<TariffParameters, String> tariffParameters;
     private Date openDate;
-    private Date closeDate = DEFAULT_CLOSE_DATE;
+    //default closeDate 01.01.2030 (other constructors are deprecated):
+    private Date closeDate = new Date(1893448800000L);
+
     private static final String DEFAULT_ACTIVATION_PAYMENT = "0";
     private static final String DEFAULT_TARIFICATION_INTERVAL_SECONDS = "1";
     private static final String DEFAULT_FAVORITE_NUMBER_AMOUNT = "0";
-
-    //default closeDate 01.01.2030
-    private static final Date DEFAULT_CLOSE_DATE = new Date(1893448800000L);
     private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
+
 
     public enum CallPriceParameters {
         INSIDE_NETWORK,
@@ -42,6 +45,7 @@ public class Tariff {
     }
 
     public Tariff() {
+        logger.debug("Tariff without parameters created.");
     }
 
     public Tariff(String id, String name, String operatorName, BigDecimal payRoll, Map<CallPriceParameters, BigDecimal> callPrices,
@@ -53,9 +57,15 @@ public class Tariff {
         this.callPrices = callPrices;
         this.smsPrice = smsPrice;
         this.openDate = openDate;
-        this.closeDate = closeDate == null ? DEFAULT_CLOSE_DATE : closeDate;
+
+        if (closeDate != null) {
+            this.closeDate = closeDate;
+        }
+
         initDefaultTariffParameters(tariffParameters);
+        logger.debug("Tariff created. id: " + id);
     }
+
 
     private void initDefaultTariffParameters(Map<TariffParameters, String> parameters) {
         tariffParameters = parameters;
@@ -69,7 +79,6 @@ public class Tariff {
             tariffParameters.put(TARIFICATION, DEFAULT_TARIFICATION_INTERVAL_SECONDS);
         }
     }
-
 
     @Override
     public String toString() {
@@ -104,6 +113,16 @@ public class Tariff {
     public int hashCode() {
         return Objects.hash(getId(), getName(), getOperatorName(), getPayRoll(),
                 getSmsPrice(), getCallPrices(), getTariffParameters(), getOpenDate(), getCloseDate());
+    }
+
+    public Map<TariffParameters, String> getTariffParameters() {
+        return tariffParameters;
+    }
+
+    //setting default values, if not exist in xml
+    public void setTariffParameters(Map<TariffParameters, String> tariffParameters) {
+        this.tariffParameters = tariffParameters;
+        initDefaultTariffParameters(tariffParameters);
     }
 
     public void setCloseDate(Date closeDate) {
@@ -162,14 +181,6 @@ public class Tariff {
         this.smsPrice = smsPrice;
     }
 
-    public Map<TariffParameters, String> getTariffParameters() {
-        return tariffParameters;
-    }
-
-    public void setTariffParameters(Map<TariffParameters, String> tariffParameters) {
-        this.tariffParameters = tariffParameters;
-        initDefaultTariffParameters(tariffParameters);
-    }
 
     public Date getOpenDate() {
         return openDate;

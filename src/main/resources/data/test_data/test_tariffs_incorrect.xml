@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<tariffs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://anelkin.by/telecom ../tariff_schema.xsd"
+         xmlns="http://anelkin.by/telecom">
+   <!--All optional parameters are setted:-->
+    <tariff id="VL100101" name="Privet Light" operatorName="Velcom" openDate="2015-04-11" closeDate="2017-08-10">
+        <payRoll>-14</payRoll>
+        <callPrices>
+            <insideNetwork>0.1</insideNetwork>
+            <outsideNetwork>0.2</outsideNetwork>
+            <onLandLine>0.25</onLandLine>
+            <onFavoriteNumber>0</onFavoriteNumber>
+        </callPrices>
+        <smsPrice>0.05</smsPrice>
+        <parameters>
+            <favoriteNumbersAmount>3</favoriteNumbersAmount>
+            <tarification>12</tarification>
+            <activationPayment>10</activationPayment>
+        </parameters>
+    </tariff>
+
+    <!--All optional parameters are NOT setted(must be default or not to exist):-->
+    <tariff id="VL100102" name="Privet Active" operatorName="Velcom" openDate="2017-01-01" >
+        <payRoll>5</payRoll>
+        <callPrices>
+            <insideNetwork>0</insideNetwork>
+            <outsideNetwork>0.5</outsideNetwork>
+            <onLandLine>0.5</onLandLine>
+        </callPrices>
+        <smsPrice>0.1</smsPrice>
+        <parameters/>
+    </tariff>
+</tariffs>
